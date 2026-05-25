@@ -240,9 +240,10 @@ section { padding: 76px 0; }
 }
 .plan-card img {
   width: 100%;
-  height: 190px;
-  object-fit: cover;
-  background: var(--panel-strong);
+  height: 132px;
+  padding: 8px;
+  object-fit: contain;
+  background: #fff;
 }
 .plan-body { padding: 18px; }
 .plan-top {
@@ -373,6 +374,62 @@ section { padding: 76px 0; }
   margin: 0;
   color: var(--muted);
 }
+.operation-band {
+  background: var(--white);
+}
+.operation-layout {
+  display: grid;
+  grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr);
+  gap: 34px;
+  align-items: center;
+}
+.operation-copy {
+  padding: 30px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+.operation-copy h2 {
+  margin: 0 0 14px;
+  font-size: clamp(28px, 3.6vw, 46px);
+  line-height: 1.15;
+}
+.operation-copy p {
+  margin: 0;
+  color: var(--muted);
+}
+.market-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 22px;
+}
+.market-grid span {
+  padding: 10px 12px;
+  color: #223044;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 800;
+}
+.revenue-panel {
+  padding: 18px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+.revenue-panel img {
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+}
+.revenue-note {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
 .process-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -457,6 +514,7 @@ footer {
   }
   .plans-grid,
   .compare-layout,
+  .operation-layout,
   .scenario-grid,
   .process-grid,
   .faq-grid {
@@ -493,7 +551,10 @@ footer {
     grid-template-columns: 1fr;
   }
   section { padding: 56px 0; }
-  .plan-card img { height: 160px; }
+  .plan-card img { height: 118px; }
+  .market-grid { grid-template-columns: 1fr; }
+  .operation-layout { grid-template-columns: 1fr; }
+  .operation-copy { padding: 24px; }
   .scenario-card {
     min-height: auto;
     border-right: 0;
@@ -532,7 +593,7 @@ footer {
     <div class="container hero-inner">
       <p class="eyebrow">成都新能源4.2米货车租赁</p>
       <h1>不是只看月租低不低，而是车能不能稳定跑起来。</h1>
-      <p class="hero-text">面向司机、车队和企业客户，提供120度、132度、140度新能源4.2米货车租赁。先确认路线、载重、日均公里和预算，再推荐车型、租期和交付方案。</p>
+      <p class="hero-text">面向司机、车队和企业客户，提供以仓栅式为主的120度、132度、140度新能源4.2米货车租赁。先确认路线、载重、日均公里和预算，再推荐车型、租期和交付方案。</p>
       <div class="hero-actions">
         <a class="button primary" href="tel:13086677171">电话咨询租车方案</a>
         <a class="button secondary" href="#plans">查看车型和租金</a>
@@ -551,16 +612,16 @@ footer {
       <div class="section-head">
         <div>
           <p class="section-kicker">RENTAL PLANS</p>
-          <h2>120、132、140度车型，对应不同路线和装载强度。</h2>
+          <h2>仓栅式为主，120、132、140度车型对应不同路线。</h2>
         </div>
         <p>车型不是越贵越好。日均公里、货物重量、是否跑城际，决定应该选哪一档电量和车厢结构。</p>
       </div>
       <div class="plans-grid">
         <article class="plan-card">
-          <img src="assets/real/plan-120.jpg" alt="120度新能源4.2米货车租赁">
+          <img src="assets/real/rental-plan-120.jpg" alt="120度新能源4.2米货车租赁">
           <div class="plan-body">
             <div class="plan-top">
-              <div><h3>120度车型</h3><p>新能源4.2米厢货</p></div>
+              <div><h3>120度车型</h3><p>4.2米新能源货车</p></div>
               <div class="price">¥5,800/月起</div>
             </div>
             <p>适合成都同城配送、平台接单、日常短途周转，预算更可控。</p>
@@ -568,10 +629,10 @@ footer {
           </div>
         </article>
         <article class="plan-card">
-          <img src="assets/real/plan-132.jpg" alt="132度新能源高栏货车租赁">
+          <img src="assets/real/rental-plan-132.jpg" alt="132度新能源仓栅式货车租赁">
           <div class="plan-body">
             <div class="plan-top">
-              <div><h3>132度车型</h3><p>续航和载重均衡</p></div>
+              <div><h3>132度车型</h3><p>仓栅式为主，续航和载重均衡</p></div>
               <div class="price">¥6,000/月起</div>
             </div>
             <p>适合成都周边、短城际、建材和零担配送，兼顾续航和装载能力。</p>
@@ -579,10 +640,10 @@ footer {
           </div>
         </article>
         <article class="plan-card">
-          <img src="assets/real/plan-140.jpg" alt="140度新能源货车租赁">
+          <img src="assets/real/rental-plan-140.jpg" alt="140度新能源仓栅式货车租赁">
           <div class="plan-body">
             <div class="plan-top">
-              <div><h3>140度车型</h3><p>更长续航储备</p></div>
+              <div><h3>140度车型</h3><p>仓栅式为主，更长续航储备</p></div>
               <div class="price">¥6,000-7,000/月</div>
             </div>
             <p>适合城际运输、高频用车和更长时间运营，对续航余量要求更高。</p>
@@ -633,6 +694,30 @@ footer {
         <article class="scenario-card"><strong>02</strong><h3>企业配送</h3><p>重点看货物尺寸、装卸频率和车厢结构，保证日常配送稳定。</p></article>
         <article class="scenario-card"><strong>03</strong><h3>成都周边</h3><p>重点看续航余量和返程充电条件，避免车能跑但时间被充电拖住。</p></article>
         <article class="scenario-card"><strong>04</strong><h3>车队扩容</h3><p>重点看同批车源、合同周期、维修响应和后续置换方案。</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="operation-band">
+    <div class="container operation-layout">
+      <div class="operation-copy">
+        <p class="section-kicker">JIEFANG SOUTHWEST CENTER</p>
+        <h2>解放西南运营中心交付覆盖，不是只守一个成都仓。</h2>
+        <p>新三程围绕解放西南运营中心做新能源仓栅式货车交付和司机运营，服务覆盖西安、长沙、重庆、贵阳、昆明、南宁、成都，面向陕西、湖南、重庆、贵州、云南、广西、四川多个市场承接车辆交付和司机合作。</p>
+        <div class="market-grid">
+          <span>陕西：西安</span>
+          <span>湖南：长沙</span>
+          <span>重庆：主城及周边</span>
+          <span>贵州：贵阳</span>
+          <span>云南：昆明</span>
+          <span>广西：南宁</span>
+          <span>四川：成都</span>
+          <span>主力车型：仓栅式4.2米</span>
+        </div>
+      </div>
+      <div class="revenue-panel">
+        <img src="assets/real/revenue-proof.svg" alt="3月和4月司机合作真实流水核验示意">
+        <p class="revenue-note">真实流水不在官网上乱写数字。3月、4月后台流水截图打开后，可替换这里作为司机合作的核验证据。</p>
       </div>
     </div>
   </section>
