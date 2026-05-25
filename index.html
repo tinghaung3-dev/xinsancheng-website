@@ -326,6 +326,40 @@ section { padding: 78px 0; }
   font-weight: 500;
 }
 
+.media-section { background: var(--white); }
+.showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+.showcase-card {
+  margin: 0;
+  overflow: hidden;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+.showcase-card img {
+  width: 100%;
+  aspect-ratio: 1.35;
+  object-fit: cover;
+}
+.showcase-card figcaption {
+  min-height: 86px;
+  padding: 16px;
+}
+.showcase-card strong {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+.showcase-card span {
+  display: block;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
 .process-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -427,6 +461,7 @@ footer {
   .hero-strip,
   .service-grid,
   .process-grid,
+  .showcase-grid,
   .proof-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -458,6 +493,7 @@ footer {
   .hero-strip,
   .service-grid,
   .process-grid,
+  .showcase-grid,
   .proof-grid {
     grid-template-columns: 1fr;
   }
@@ -591,6 +627,36 @@ footer {
             </tr>
           </tbody>
         </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="media-section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">REAL FLEET</p>
+          <h2>实车、交付现场和驾驶室细节，都能现场确认。</h2>
+        </div>
+        <p>官网使用真实车辆素材，客户可以先看外观、货厢、内饰和交付环境，再预约到店看车。</p>
+      </div>
+      <div class="showcase-grid">
+        <figure class="showcase-card">
+          <img src="assets/real/green-truck.jpg" alt="绿色新能源高栏货车实车">
+          <figcaption><strong>新能源高栏车</strong><span>适合批量配送、建材、零担和城际运输场景。</span></figcaption>
+        </figure>
+        <figure class="showcase-card">
+          <img src="assets/real/white-truck-yard.jpg" alt="白色新能源货车交付现场">
+          <figcaption><strong>白色厢货实车</strong><span>到店可看车况、货厢尺寸、轮胎和外观细节。</span></figcaption>
+        </figure>
+        <figure class="showcase-card">
+          <img src="assets/real/cabin-interior.jpg" alt="新能源货车驾驶室内饰">
+          <figcaption><strong>驾驶室内饰</strong><span>交车前确认座椅、仪表、空调和驾驶辅助配置。</span></figcaption>
+        </figure>
+        <figure class="showcase-card">
+          <img src="assets/real/dashboard.jpg" alt="新能源货车仪表盘细节">
+          <figcaption><strong>仪表与电量</strong><span>根据路线核对续航、电量和使用习惯，避免盲选车型。</span></figcaption>
+        </figure>
       </div>
     </div>
   </section>
