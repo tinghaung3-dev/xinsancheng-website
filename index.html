@@ -301,29 +301,58 @@ section { padding: 78px 0; }
   border-radius: 50%;
   font-size: 14px;
 }
-.vehicle-table {
-  width: 100%;
-  border-collapse: collapse;
+.vehicle-plan-grid {
+  display: grid;
+  gap: 16px;
+}
+.vehicle-plan-card {
+  overflow: hidden;
   background: var(--white);
   border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 16px 40px rgba(16, 24, 40, .08);
 }
-.vehicle-table th,
-.vehicle-table td {
-  padding: 16px;
-  text-align: left;
-  border-bottom: 1px solid var(--line);
-}
-.vehicle-table th {
-  color: #475467;
+.vehicle-plan-card img {
+  width: 100%;
+  height: 178px;
+  object-fit: cover;
   background: var(--panel-strong);
-  font-size: 13px;
 }
-.vehicle-table td { font-weight: 650; }
-.vehicle-table td span {
-  display: block;
+.vehicle-plan-body {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px 18px;
+  padding: 16px;
+}
+.vehicle-plan-body h3 {
+  margin: 0 0 4px;
+  font-size: 18px;
+}
+.vehicle-plan-body p {
+  margin: 0;
   color: var(--muted);
   font-size: 13px;
-  font-weight: 500;
+}
+.vehicle-plan-price {
+  color: var(--brand-dark);
+  font-weight: 800;
+  white-space: nowrap;
+}
+.vehicle-plan-scene {
+  grid-column: 1 / -1;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+  color: #344054;
+  font-size: 14px;
+  font-weight: 700;
+}
+.vehicle-note {
+  padding: 16px;
+  color: #344054;
+  background: rgba(0, 107, 94, .08);
+  border: 1px solid rgba(0, 107, 94, .18);
+  border-radius: 8px;
+  font-weight: 700;
 }
 
 .media-section { background: var(--white); }
@@ -599,34 +628,41 @@ footer {
           <div class="feature-item"><span class="check">✓</span><span>车辆交付后继续跟进使用、维修、年审和路线适配问题。</span></div>
         </div>
       </div>
-      <div>
-        <table class="vehicle-table">
-          <thead>
-            <tr><th>车型方案</th><th>参考租金</th><th>适合场景</th></tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>120度车型<span>新能源4.2米厢货</span></td>
-              <td>¥5,800/月起</td>
-              <td>同城配送、平台接单</td>
-            </tr>
-            <tr>
-              <td>132度车型<span>续航和载重均衡</span></td>
-              <td>¥6,000/月起</td>
-              <td>成都周边、短城际</td>
-            </tr>
-            <tr>
-              <td>140度车型<span>更长续航储备</span></td>
-              <td>¥6,000-7,000/月</td>
-              <td>城际运输、高频用车</td>
-            </tr>
-            <tr>
-              <td>二手车处置<span>退役车辆整备出售</span></td>
-              <td>一车一价</td>
-              <td>预算敏感、固定货源</td>
-            </tr>
-          </tbody>
-        </table>
+      <div class="vehicle-plan-grid">
+        <article class="vehicle-plan-card">
+          <img src="assets/real/plan-120.jpg" alt="120度新能源4.2米厢货外观">
+          <div class="vehicle-plan-body">
+            <div>
+              <h3>120度车型</h3>
+              <p>新能源4.2米厢货</p>
+            </div>
+            <div class="vehicle-plan-price">¥5,800/月起</div>
+            <div class="vehicle-plan-scene">同城配送、平台接单、日常短途周转</div>
+          </div>
+        </article>
+        <article class="vehicle-plan-card">
+          <img src="assets/real/plan-132.jpg" alt="132度新能源高栏货车外观">
+          <div class="vehicle-plan-body">
+            <div>
+              <h3>132度车型</h3>
+              <p>续航和载重均衡</p>
+            </div>
+            <div class="vehicle-plan-price">¥6,000/月起</div>
+            <div class="vehicle-plan-scene">成都周边、短城际、建材和零担配送</div>
+          </div>
+        </article>
+        <article class="vehicle-plan-card">
+          <img src="assets/real/plan-140.jpg" alt="140度新能源货车外观">
+          <div class="vehicle-plan-body">
+            <div>
+              <h3>140度车型</h3>
+              <p>更长续航储备</p>
+            </div>
+            <div class="vehicle-plan-price">¥6,000-7,000/月</div>
+            <div class="vehicle-plan-scene">城际运输、高频用车、长时间运营</div>
+          </div>
+        </article>
+        <div class="vehicle-note">二手车处置：退役车辆整备出售，一车一价，适合预算敏感和固定货源客户。</div>
       </div>
     </div>
   </section>
