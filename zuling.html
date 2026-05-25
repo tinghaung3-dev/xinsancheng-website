@@ -430,6 +430,30 @@ section { padding: 76px 0; }
   color: var(--muted);
   font-size: 13px;
 }
+.proof-stack {
+  display: grid;
+  gap: 12px;
+}
+.proof-item {
+  padding: 18px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+.proof-item strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--brand-dark);
+  font-size: 13px;
+}
+.proof-item h3 {
+  margin: 0 0 8px;
+  font-size: 22px;
+}
+.proof-item p {
+  margin: 0;
+  color: var(--muted);
+}
 .process-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -582,7 +606,7 @@ footer {
       <a href="#cost">费用说明</a>
       <a href="#process">租车流程</a>
       <a href="/xinche.html">新车销售</a>
-      <a href="/zhaopin.html">司机招聘</a>
+      <a href="/zhaopin.html">司机合作</a>
     </nav>
     <a class="phone-link" href="tel:13086677171">13086677171</a>
   </div>
@@ -703,7 +727,7 @@ footer {
       <div class="operation-copy">
         <p class="section-kicker">JIEFANG SOUTHWEST CENTER</p>
         <h2>解放西南运营中心交付覆盖，不是只守一个成都仓。</h2>
-        <p>新三程围绕解放西南运营中心做新能源仓栅式货车交付和司机运营，服务覆盖西安、长沙、重庆、贵阳、昆明、南宁、成都，面向陕西、湖南、重庆、贵州、云南、广西、四川多个市场承接车辆交付和司机合作。</p>
+        <p>新三程围绕解放西南运营中心做新能源仓栅式货车交付和司机配车，服务覆盖西安、长沙、重庆、贵阳、昆明、南宁、成都，面向陕西、湖南、重庆、贵州、云南、广西、四川多个市场承接车辆交付和合作咨询。</p>
         <div class="market-grid">
           <span>陕西：西安</span>
           <span>湖南：长沙</span>
@@ -716,8 +740,24 @@ footer {
         </div>
       </div>
       <div class="revenue-panel">
-        <img src="assets/real/revenue-proof.svg" alt="3月和4月司机合作真实流水核验示意">
-        <p class="revenue-note">真实流水不在官网上乱写数字。3月、4月后台流水截图打开后，可替换这里作为司机合作的核验证据。</p>
+        <div class="proof-stack">
+          <article class="proof-item">
+            <strong>合作前先核验</strong>
+            <h3>不在官网乱写月入数字。</h3>
+            <p>司机合作先现场看车、看合同、看费用明细，再看后台流水和路线结算口径。</p>
+          </article>
+          <article class="proof-item">
+            <strong>费用边界</strong>
+            <h3>租金、押金、保险责任写清楚。</h3>
+            <p>适合租赁、以租代购还是先观望，要结合路线、充电条件和实际接单能力判断。</p>
+          </article>
+          <article class="proof-item">
+            <strong>主力车型</strong>
+            <h3>仓栅式4.2米为主。</h3>
+            <p>围绕同城配送、城际短途、建材和零担场景匹配120、132、140度车型。</p>
+          </article>
+        </div>
+        <p class="revenue-note">真实3月、4月流水截图需要从后台打开后再上官网，不用占位图冒充真实数据。</p>
       </div>
     </div>
   </section>
