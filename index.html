@@ -376,6 +376,68 @@ section { padding: 78px 0; }
   font-weight: 700;
 }
 
+.business-focus {
+  background: var(--white);
+}
+.focus-grid {
+  display: grid;
+  gap: 28px;
+}
+.focus-item {
+  display: grid;
+  grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr);
+  gap: 36px;
+  align-items: center;
+  padding: 32px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+.focus-item:nth-child(even) .focus-media { order: 2; }
+.focus-media {
+  overflow: hidden;
+  border-radius: 8px;
+  background: var(--panel-strong);
+}
+.focus-media img {
+  width: 100%;
+  aspect-ratio: 1.55;
+  object-fit: cover;
+}
+.focus-copy h3 {
+  margin: 0 0 12px;
+  font-size: clamp(26px, 3vw, 38px);
+  line-height: 1.18;
+}
+.focus-copy p {
+  margin: 0;
+  color: var(--muted);
+}
+.focus-points {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 22px 0;
+}
+.focus-points span {
+  padding: 10px 12px;
+  color: #223044;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 700;
+}
+.focus-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.focus-actions .button.secondary {
+  color: var(--brand-dark);
+  border-color: rgba(11, 79, 74, .28);
+}
+
 .media-section { background: var(--white); }
 .showcase-grid {
   display: grid;
@@ -525,6 +587,8 @@ footer {
   .service-card:nth-child(2) { border-right: 0; }
   .service-card:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
   .fleet-layout { grid-template-columns: 1fr; }
+  .focus-item { grid-template-columns: 1fr; }
+  .focus-item,
   .section-head,
   .contact-box,
   .footer-inner {
@@ -564,6 +628,10 @@ footer {
   .service-card:last-child { border-bottom: 0; }
   section { padding: 56px 0; }
   .fleet-panel { padding: 24px; }
+  .focus-item { padding: 18px; }
+  .focus-item:nth-child(even) .focus-media { order: 0; }
+  .focus-points { grid-template-columns: 1fr; }
+  .focus-actions .button { width: 100%; }
   .vehicle-plan-card { grid-template-columns: 112px 1fr; }
   .vehicle-plan-card img { min-height: 124px; }
   .vehicle-plan-body {
@@ -593,9 +661,10 @@ footer {
     <nav class="nav" aria-label="主导航">
       <a href="#services">业务服务</a>
       <a href="#fleet">车型方案</a>
+      <a href="#sales">新车销售</a>
+      <a href="#drivers">司机合作</a>
       <a href="#process">合作流程</a>
       <a href="/zuling.html">货车租赁</a>
-      <a href="/zhaopin.html">司机招聘</a>
     </nav>
     <a class="phone-link" href="tel:13086677171">13086677171</a>
   </div>
@@ -646,13 +715,13 @@ footer {
           <span class="num">03</span>
           <h3>新车与二手车</h3>
           <p>对接新车采购、二手车整备和车况说明，适合已有货源的企业、车队和个体司机。</p>
-          <a href="/xinche.html">查看买车服务</a>
+          <a href="#sales">查看买车服务</a>
         </article>
         <article class="service-card">
           <span class="num">04</span>
           <h3>司机配车与招聘</h3>
           <p>协助司机选车、签约、上路和平台接单，降低新手入行的信息差和试错成本。</p>
-          <a href="/zhaopin.html">查看司机合作</a>
+          <a href="#drivers">查看司机合作</a>
         </article>
       </div>
     </div>
@@ -706,6 +775,52 @@ footer {
         </article>
         <div class="vehicle-note">二手车处置：退役车辆整备出售，一车一价，适合预算敏感和固定货源客户。</div>
       </div>
+    </div>
+  </section>
+
+  <section class="business-focus">
+    <div class="container focus-grid">
+      <article id="sales" class="focus-item">
+        <div class="focus-media">
+          <img src="assets/real/sales-vehicle.jpg" alt="新能源货车新车销售外观">
+        </div>
+        <div class="focus-copy">
+          <p class="section-kicker">NEW & USED SALES</p>
+          <h3>新车销售和二手车整备，不只看价格。</h3>
+          <p>面向已有货源、准备组建车队或想把租赁车辆转为自有资产的客户，先确认预算、路线、载重和回本周期，再匹配新车、准新车或整备二手车。</p>
+          <div class="focus-points">
+            <span>新车采购与上牌交付</span>
+            <span>二手车整备和车况说明</span>
+            <span>以租代购转购方案</span>
+            <span>合同、保险、售后协同</span>
+          </div>
+          <div class="focus-actions">
+            <a class="button primary" href="tel:13086677171">咨询买车方案</a>
+            <a class="button secondary" href="#fleet">对比车型方案</a>
+          </div>
+        </div>
+      </article>
+
+      <article id="drivers" class="focus-item">
+        <div class="focus-media">
+          <img src="assets/real/driver-handoff.jpg" alt="新能源货车司机合作和交车现场">
+        </div>
+        <div class="focus-copy">
+          <p class="section-kicker">DRIVER PARTNER</p>
+          <h3>司机招聘不是喊口号，是把车、路线和收入算清楚。</h3>
+          <p>面向想进入新能源货运的司机，先说明车型、租金、押金、平台接单和日常成本，再安排看车、签约、交车和上路后的用车跟进。</p>
+          <div class="focus-points">
+            <span>适合新手司机入行</span>
+            <span>协助选车和签约</span>
+            <span>对接平台接单方向</span>
+            <span>交车后跟进使用问题</span>
+          </div>
+          <div class="focus-actions">
+            <a class="button primary" href="tel:13086677171">咨询司机合作</a>
+            <a class="button secondary" href="#process">查看合作流程</a>
+          </div>
+        </div>
+      </article>
     </div>
   </section>
 
