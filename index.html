@@ -522,6 +522,69 @@ section { padding: 78px 0; }
   display: block;
   width: 100%;
   border-radius: 6px;
+  cursor: zoom-in;
+}
+.driver-case {
+  background: #101828;
+  color: var(--white);
+}
+.driver-case .section-kicker { color: #7dd3c7; }
+.driver-case .section-head p { color: #cbd5e1; }
+.case-layout {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+  gap: 24px;
+  align-items: start;
+}
+.case-summary {
+  padding: 28px;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 8px;
+}
+.case-summary h3 {
+  margin: 0 0 12px;
+  font-size: clamp(28px, 4vw, 46px);
+  line-height: 1.1;
+}
+.case-summary p { margin: 0; color: #dbe5ef; }
+.case-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 22px;
+}
+.case-stats span {
+  padding: 12px 14px;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 6px;
+  font-weight: 900;
+}
+.case-proof-grid { display: grid; gap: 14px; }
+.case-proof {
+  margin: 0;
+  overflow: hidden;
+  background: var(--white);
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: 8px;
+}
+.case-proof img {
+  width: 100%;
+  aspect-ratio: 16 / 5.8;
+  object-fit: cover;
+  cursor: zoom-in;
+}
+.case-proof.tall img { aspect-ratio: 16 / 6.2; }
+.case-proof figcaption {
+  padding: 12px 14px;
+  color: var(--ink);
+  font-weight: 800;
+}
+.case-note {
+  margin: 10px 0 0;
+  color: #cbd5e1;
+  font-size: 13px;
 }
 .coverage-row {
   display: flex;
@@ -574,6 +637,7 @@ section { padding: 78px 0; }
   width: 100%;
   aspect-ratio: 1.35;
   object-fit: cover;
+  cursor: zoom-in;
 }
 .showcase-card figcaption {
   min-height: 86px;
@@ -642,6 +706,42 @@ section { padding: 78px 0; }
   margin-top: 10px;
   color: #d9e3ec;
 }
+.focus-media img,
+.vehicle-plan-card img {
+  cursor: zoom-in;
+}
+.image-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 22px;
+  background: rgba(8, 17, 31, .88);
+}
+.image-lightbox.is-open { display: flex; }
+.image-lightbox img {
+  max-width: min(1120px, 96vw);
+  max-height: 86vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 28px 80px rgba(0,0,0,.46);
+}
+.image-lightbox button {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(255,255,255,.3);
+  border-radius: 999px;
+  color: var(--white);
+  background: rgba(255,255,255,.12);
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+}
 
 .contact-band {
   padding: 58px 0;
@@ -700,7 +800,8 @@ footer {
   .service-grid,
   .process-grid,
   .showcase-grid,
-  .proof-grid {
+  .proof-grid,
+  .case-layout {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .service-card:nth-child(2) { border-right: 0; }
@@ -736,7 +837,9 @@ footer {
   .service-grid,
   .process-grid,
   .showcase-grid,
-  .proof-grid {
+  .proof-grid,
+  .case-layout,
+  .case-stats {
     grid-template-columns: 1fr;
   }
   .service-card {
@@ -934,7 +1037,7 @@ footer {
             <span>陕西西安</span><span>湖南长沙</span><span>重庆</span><span>贵州贵阳</span><span>云南昆明</span><span>广西南宁</span><span>四川成都</span>
           </div>
           <div class="revenue-card-inline">
-            <img src="assets/real/driver-flow-proof.jpg" alt="司机合作后台流水隐私处理展示">
+            <img src="assets/real/driver-flow-proof.jpg" data-full="assets/real/driver-flow-detail.jpg" alt="司机合作后台流水隐私处理展示">
           </div>
           <div class="focus-points">
             <span>01 到公司面试</span>
@@ -948,6 +1051,41 @@ footer {
           </div>
         </div>
       </article>
+    </div>
+  </section>
+
+  <section class="driver-case">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">DRIVER CASE</p>
+          <h2>朱师傅加入新三程，一个月流水约2.69万。</h2>
+        </div>
+        <p>总览和明细来自同一后台。官网展示已做隐私处理，完整订单明细到公司现场打开后台核验。</p>
+      </div>
+      <div class="case-layout">
+        <div class="case-summary">
+          <h3>朱师傅月度流水：26900元</h3>
+          <p>后台总览显示朱加平师傅绑定车辆后，当月总流水26900元，未付0，利润金额26900元。下方订单明细展示其日常跑车记录，单笔金额多在750-1200元区间，状态为已完成、已支付。</p>
+          <div class="case-stats">
+            <span>总流水 26900元</span>
+            <span>未付 0元</span>
+            <span>利润金额 26900元</span>
+            <span>明细现场核验</span>
+          </div>
+          <p class="case-note">说明：明细图为后台一屏订单记录，客户电话、地址等隐私已模糊；完整明细与总流水到店核验。</p>
+        </div>
+        <div class="case-proof-grid">
+          <figure class="case-proof">
+            <img src="assets/real/driver-zhu-total-preview.jpg" data-full="assets/real/driver-zhu-total-detail.jpg" alt="朱师傅月度总流水26900后台总览">
+            <figcaption>总流水总览：26900元</figcaption>
+          </figure>
+          <figure class="case-proof tall">
+            <img src="assets/real/driver-zhu-orders-preview.jpg" data-full="assets/real/driver-zhu-orders-detail.jpg" alt="朱师傅日常跑车订单明细">
+            <figcaption>日常跑车明细：订单号、金额、支付状态和接单司机可核验</figcaption>
+          </figure>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -1052,5 +1190,32 @@ footer {
     <span>© 2026 成都新三程</span>
   </div>
 </footer>
+<div class="image-lightbox" id="imageLightbox" aria-hidden="true">
+  <button type="button" aria-label="关闭图片">×</button>
+  <img src="" alt="">
+</div>
+<script>
+const lightbox = document.getElementById('imageLightbox');
+const lightboxImg = lightbox.querySelector('img');
+document.querySelectorAll('main img').forEach((img) => {
+  img.addEventListener('click', () => {
+    lightboxImg.src = img.dataset.full || img.currentSrc || img.src;
+    lightboxImg.alt = img.alt || '图片放大查看';
+    lightbox.classList.add('is-open');
+    lightbox.setAttribute('aria-hidden', 'false');
+  });
+});
+function closeLightbox() {
+  lightbox.classList.remove('is-open');
+  lightbox.setAttribute('aria-hidden', 'true');
+  lightboxImg.src = '';
+}
+lightbox.addEventListener('click', (event) => {
+  if (event.target === lightbox || event.target.tagName === 'BUTTON') closeLightbox();
+});
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') closeLightbox();
+});
+</script>
 </body>
 </html>
