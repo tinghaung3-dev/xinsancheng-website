@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>司机合作与新能源货车配车 - 成都新三程</title>
-<meta name="description" content="成都新三程提供新能源4.2米货车司机合作与配车服务，合作前核验车辆、合同、租金押金、保险责任、路线成本和后台流水材料。">
+<meta name="description" content="成都新三程司机合作流程：到公司面试、了解公司流水、上岗培训、提车及提车培训，围绕新能源4.2米仓栅式货车提供配车与运营服务。">
 <meta name="keywords" content="成都司机合作,成都新能源货车配车,成都4.2米货车司机,新能源货车租赁,仓栅式货车">
 <link rel="canonical" href="https://xinsancheng.cn/zhaopin.html">
 
@@ -19,7 +19,7 @@
     "telephone": "13086677171"
   },
   "areaServed": ["四川", "重庆", "陕西", "湖南", "贵州", "云南", "广西"],
-  "description": "围绕仓栅式新能源4.2米货车提供司机合作、车辆租赁、以租代购和交付服务。合作前核验车辆、合同、费用和后台流水材料。"
+  "description": "围绕仓栅式新能源4.2米货车提供司机合作、车辆租赁、以租代购和交付服务。司机合作流程包括到公司面试、了解公司流水、培训、提车及提车培训。"
 }
 </script>
 
@@ -98,8 +98,8 @@ img { display: block; max-width: 100%; }
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(12,24,39,1) 0%, rgba(12,24,39,.76) 46%, rgba(12,24,39,.22) 100%),
-    url("assets/real/driver-handoff.jpg") 88% 58% / min(660px, 50vw) auto no-repeat;
+    linear-gradient(90deg, rgba(12,24,39,1) 0%, rgba(12,24,39,.72) 48%, rgba(12,24,39,.24) 100%),
+    url("assets/real/driver-company-front.jpg") 88% center / min(720px, 54vw) auto no-repeat;
   opacity: .9;
 }
 .hero-inner {
@@ -177,6 +177,39 @@ section { padding: 76px 0; }
 .card strong { color: var(--accent); font-size: 13px; }
 .card h3 { margin: 18px 0 10px; font-size: 24px; }
 .card p { margin: 0; color: var(--muted); }
+.company-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+.company-card {
+  margin: 0;
+  overflow: hidden;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 10px 26px rgba(22, 32, 51, .08);
+}
+.company-card img {
+  width: 100%;
+  aspect-ratio: 1.35;
+  object-fit: cover;
+}
+.company-card figcaption {
+  min-height: 94px;
+  padding: 16px;
+}
+.company-card strong {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 17px;
+}
+.company-card span {
+  display: block;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.45;
+}
 .split-band { background: var(--panel); }
 .split {
   display: grid;
@@ -218,6 +251,64 @@ section { padding: 76px 0; }
   font-size: 13px;
   font-weight: 800;
 }
+.flow-proof {
+  background: #101828;
+  color: var(--white);
+}
+.flow-proof .section-kicker { color: #7dd3c7; }
+.flow-proof .section-head p { color: #cbd5e1; }
+.flow-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(300px, .85fr);
+  gap: 24px;
+  align-items: center;
+}
+.flow-figure {
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  border: 1px solid rgba(255,255,255,.16);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 24px 60px rgba(0,0,0,.28);
+}
+.flow-figure img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+.flow-badge {
+  position: absolute;
+  left: 18px;
+  bottom: 18px;
+  padding: 10px 12px;
+  color: var(--white);
+  background: rgba(15, 118, 110, .92);
+  border-radius: 6px;
+  font-weight: 900;
+}
+.flow-copy {
+  display: grid;
+  gap: 14px;
+}
+.flow-copy h3 {
+  margin: 0;
+  font-size: clamp(26px, 3vw, 38px);
+  line-height: 1.15;
+}
+.flow-copy p {
+  margin: 0;
+  color: #dbe5ef;
+}
+.flow-copy span {
+  display: block;
+  padding: 12px 14px;
+  color: #eaf7f5;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 6px;
+  font-weight: 800;
+}
 .process-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -233,6 +324,39 @@ section { padding: 76px 0; }
 .process-step strong { color: #7dd3c7; font-size: 12px; }
 .process-step h3 { margin: 18px 0 10px; font-size: 21px; }
 .process-step p { margin: 0; color: #cbd5e1; }
+.workflow-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+.workflow-card {
+  overflow: hidden;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 14px 34px rgba(22, 32, 51, .09);
+}
+.workflow-card img {
+  width: 100%;
+  aspect-ratio: 1.2;
+  object-fit: cover;
+}
+.workflow-card div {
+  padding: 18px;
+}
+.workflow-card strong {
+  color: var(--accent);
+  font-size: 12px;
+}
+.workflow-card h3 {
+  margin: 12px 0 8px;
+  font-size: 20px;
+}
+.workflow-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
 .contact-band { color: var(--white); background: var(--brand-dark); }
 .contact-box {
   display: flex;
@@ -254,11 +378,14 @@ footer {
   .hero::before {
     background:
       linear-gradient(90deg, rgba(12,24,39,1) 0%, rgba(12,24,39,.86) 58%, rgba(12,24,39,.38) 100%),
-      url("assets/real/driver-handoff.jpg") 92% 66% / 460px auto no-repeat;
+      url("assets/real/driver-company-front.jpg") 92% 66% / 520px auto no-repeat;
   }
   .grid-3,
   .split,
-  .process-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .process-grid,
+  .workflow-grid,
+  .company-grid,
+  .flow-layout { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .section-head,
   .contact-box,
   .footer-inner { align-items: flex-start; flex-direction: column; }
@@ -271,7 +398,7 @@ footer {
   .hero::before {
     background:
       linear-gradient(180deg, rgba(12,24,39,1) 0%, rgba(12,24,39,.92) 58%, rgba(12,24,39,.76) 100%),
-      url("assets/real/driver-handoff.jpg") 50% 88% / 360px auto no-repeat;
+      url("assets/real/driver-company-front.jpg") 50% 88% / 380px auto no-repeat;
   }
   .hero-inner { padding: 86px 0 32px; }
   .hero p { font-size: 16px; }
@@ -279,7 +406,10 @@ footer {
   .button { width: 100%; }
   .grid-3,
   .split,
-  .process-grid { grid-template-columns: 1fr; }
+  .process-grid,
+  .workflow-grid,
+  .company-grid,
+  .flow-layout { grid-template-columns: 1fr; }
   section { padding: 56px 0; }
   .card { min-height: auto; }
   .copy-panel { padding: 24px; }
@@ -307,11 +437,11 @@ footer {
   <section class="hero">
     <div class="hero-inner">
       <p class="eyebrow">司机合作与新能源货车配车</p>
-      <h1>不靠虚假高薪吸引司机，先把车、合同和成本讲清楚。</h1>
-      <p>新三程围绕仓栅式4.2米新能源货车，提供租赁、以租代购、交付和司机合作咨询。合作前看实车、看合同、看费用边界、看路线成本，需要流水材料就现场打开后台核验。</p>
+      <h1>司机先到公司，把流水、培训和提车流程看明白。</h1>
+      <p>新三程围绕仓栅式4.2米新能源货车做司机合作、车辆租赁和以租代购。合作不是先喊收入，而是先面试、看流水、做培训，再提车上路。</p>
       <div class="actions">
         <a class="button primary" href="tel:13086677171">电话咨询司机合作</a>
-        <a class="button secondary" href="#verify">查看核验重点</a>
+        <a class="button secondary" href="#process">查看合作流程</a>
       </div>
     </div>
   </section>
@@ -321,14 +451,65 @@ footer {
       <div class="section-head">
         <div>
           <p class="section-kicker">VERIFY FIRST</p>
-          <h2>司机合作先核验，不先讲漂亮话。</h2>
+          <h2>先看公司和流程，再决定是否合作。</h2>
         </div>
-        <p>官网不写未经核实的月入数字。真实收入要看路线、接单能力、租金、充电、维修和结算周期。</p>
+        <p>官网不写未经核实的月入数字。真实合作要看公司、流水、培训、车辆、费用和结算周期。</p>
       </div>
       <div class="grid-3">
-        <article class="card"><strong>01</strong><h3>车辆核验</h3><p>现场看车况、车厢结构、电池度数和交付照片，主力车型以仓栅式4.2米新能源货车为主。</p></article>
-        <article class="card"><strong>02</strong><h3>费用核验</h3><p>租金、押金、保险、年审、违约责任、转购条件写清楚，不把费用藏在口头承诺里。</p></article>
-        <article class="card"><strong>03</strong><h3>流水核验</h3><p>涉及3月、4月或其他月份流水时，以后台页面和截图为准，不用占位图冒充真实数据。</p></article>
+        <article class="card"><strong>01</strong><h3>到公司面试</h3><p>先到成都新三程现场沟通，确认驾驶经验、合作意向、路线需求和能接受的费用边界。</p></article>
+        <article class="card"><strong>02</strong><h3>了解公司流水</h3><p>需要看流水时在公司现场核验后台材料，说明结算口径、订单来源和费用扣减逻辑。</p></article>
+        <article class="card"><strong>03</strong><h3>培训后再提车</h3><p>合作前完成车辆使用、充电、平台规则、交付检查和安全注意事项培训，再办理提车。</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">COMPANY SCENE</p>
+          <h2>公司风采、办公和调度现场都能看到。</h2>
+        </div>
+        <p>司机不是只看广告，现场能看到公司门头、办公区域和调度沟通场景。</p>
+      </div>
+      <div class="company-grid">
+        <figure class="company-card">
+          <img src="assets/real/driver-company-front.jpg" alt="成都新三程公司门头和车辆展示">
+          <figcaption><strong>公司门头</strong><span>到店面试、看车、看合同，有明确线下沟通场所。</span></figcaption>
+        </figure>
+        <figure class="company-card">
+          <img src="assets/real/driver-office.jpg" alt="成都新三程办公区域展示">
+          <figcaption><strong>办公展示</strong><span>合作政策、费用明细和合同条款在办公室逐项沟通。</span></figcaption>
+        </figure>
+        <figure class="company-card">
+          <img src="assets/real/driver-dispatch.jpg" alt="成都新三程调度沟通货源现场">
+          <figcaption><strong>调度展示</strong><span>围绕路线、货源、车辆和结算周期做实际运营沟通。</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="flow-proof">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">REVENUE CHECK</p>
+          <h2>流水不是一句口号，到公司现场核验。</h2>
+        </div>
+        <p>官网展示图已做隐私处理。司机到店后可结合具体月份、路线和结算口径查看原始后台。</p>
+      </div>
+      <div class="flow-layout">
+        <figure class="flow-figure">
+          <img src="assets/real/driver-flow-proof.jpg" alt="司机合作后台流水隐私处理展示">
+          <figcaption class="flow-badge">后台流水样张</figcaption>
+        </figure>
+        <div class="flow-copy">
+          <h3>先看清楚收入从哪里来，也看清楚成本怎么扣。</h3>
+          <p>流水要结合城市、车型、电池度数、接单能力、充电成本、租金押金和结算周期一起看。公司现场说明，不用空泛承诺替代核验。</p>
+          <span>可核验订单、月份、收入和支付状态</span>
+          <span>同步说明租金、押金、保险和充电成本</span>
+          <span>适合再签，不适合就不盲目提车</span>
+        </div>
       </div>
     </div>
   </section>
@@ -336,12 +517,12 @@ footer {
   <section class="split-band">
     <div class="container split">
       <div class="photo-frame">
-        <img src="assets/real/delivery-check.jpg" alt="新能源货车交付和验车现场">
+        <img src="assets/real/driver-dispatch.jpg" alt="成都新三程调度沟通货源和路线">
       </div>
       <div class="copy-panel">
         <p class="section-kicker">SOUTHWEST DELIVERY</p>
         <h2>解放西南运营中心交付覆盖。</h2>
-        <p>服务覆盖西安、长沙、重庆、贵阳、昆明、南宁、成都，面向陕西、湖南、重庆、贵州、云南、广西、四川多个市场承接车辆交付和合作咨询。</p>
+        <p>服务覆盖西安、长沙、重庆、贵阳、昆明、南宁、成都，面向陕西、湖南、重庆、贵州、云南、广西、四川多个市场承接车辆交付、司机合作和运营咨询。</p>
         <div class="market-row" aria-label="市场覆盖">
           <span>陕西西安</span><span>湖南长沙</span><span>重庆</span><span>贵州贵阳</span><span>云南昆明</span><span>广西南宁</span><span>四川成都</span>
         </div>
@@ -360,15 +541,27 @@ footer {
       <div class="section-head">
         <div>
           <p class="section-kicker">PROCESS</p>
-          <h2>合作流程按实际用车推进。</h2>
+          <h2>司机合作流程按四步推进。</h2>
         </div>
-        <p>适不适合合作，不看一句承诺，看车辆、路线、成本和合同是否匹配。</p>
+        <p>从面试到提车，每一步都对应真实现场和明确材料。</p>
       </div>
-      <div class="process-grid">
-        <article class="process-step"><strong>STEP 01</strong><h3>沟通路线</h3><p>确认城市、日均公里、货物类型、装卸频率和是否已有固定业务。</p></article>
-        <article class="process-step"><strong>STEP 02</strong><h3>看车算账</h3><p>对比120、132、140度车型，核算租金、押金、充电和运营成本。</p></article>
-        <article class="process-step"><strong>STEP 03</strong><h3>核验材料</h3><p>需要看流水时现场打开后台，合同和费用边界逐条确认。</p></article>
-        <article class="process-step"><strong>STEP 04</strong><h3>签约交付</h3><p>车辆、合同、保险和交车手续确认后交付，后续继续跟进用车问题。</p></article>
+      <div class="workflow-grid">
+        <article class="workflow-card">
+          <img src="assets/real/driver-interview.jpg" alt="司机到成都新三程公司面试">
+          <div><strong>STEP 01</strong><h3>到公司面试</h3><p>确认驾驶经验、合作城市、路线意向和费用承受范围，先判断是否适合合作。</p></div>
+        </article>
+        <article class="workflow-card">
+          <img src="assets/real/driver-flow-proof.jpg" alt="司机合作公司流水隐私处理展示">
+          <div><strong>STEP 02</strong><h3>了解公司流水</h3><p>现场说明后台流水、订单来源、结算周期和成本扣减，不用空口承诺。</p></div>
+        </article>
+        <article class="workflow-card">
+          <img src="assets/real/driver-training.jpg" alt="成都新三程司机培训和调度会议">
+          <div><strong>STEP 03</strong><h3>上岗培训</h3><p>培训车辆使用、充电注意事项、接单规则、费用边界和日常运营要求。</p></div>
+        </article>
+        <article class="workflow-card">
+          <img src="assets/real/driver-delivery-training.jpg" alt="新能源货车交车及提车培训">
+          <div><strong>STEP 04</strong><h3>提车及提车培训</h3><p>交付时核对车况、资料、保险和操作事项，确认后再正式上路。</p></div>
+        </article>
       </div>
     </div>
   </section>
