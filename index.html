@@ -670,17 +670,18 @@ section { padding: 78px 0; }
   gap: 18px;
 }
 .showcase-card {
+  position: relative;
   margin: 0;
   overflow: hidden;
   background: var(--panel);
   border: 1px solid var(--line);
   border-radius: 8px;
+  cursor: zoom-in;
 }
 .showcase-card img {
   width: 100%;
   aspect-ratio: 1.35;
   object-fit: cover;
-  cursor: zoom-in;
 }
 .showcase-card figcaption {
   min-height: 86px;
@@ -696,6 +697,16 @@ section { padding: 78px 0; }
   color: var(--muted);
   font-size: 13px;
   line-height: 1.45;
+}
+.gallery-badge {
+  display: inline-flex;
+  margin-top: 10px;
+  padding: 5px 8px;
+  color: var(--brand-dark);
+  background: rgba(15, 118, 110, .1);
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 900;
 }
 
 .process-grid {
@@ -760,6 +771,8 @@ section { padding: 78px 0; }
   display: none;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  gap: 12px;
   padding: 22px;
   background: rgba(8, 17, 31, .88);
 }
@@ -771,7 +784,7 @@ section { padding: 78px 0; }
   border-radius: 8px;
   box-shadow: 0 28px 80px rgba(0,0,0,.46);
 }
-.image-lightbox button {
+.lightbox-close {
   position: absolute;
   top: 18px;
   right: 18px;
@@ -784,6 +797,55 @@ section { padding: 78px 0; }
   font-size: 24px;
   line-height: 1;
   cursor: pointer;
+}
+.lightbox-caption {
+  min-height: 22px;
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 800;
+  text-align: center;
+}
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  width: 46px;
+  height: 64px;
+  transform: translateY(-50%);
+  border: 1px solid rgba(255,255,255,.28);
+  border-radius: 999px;
+  color: var(--white);
+  background: rgba(255,255,255,.12);
+  font-size: 30px;
+  cursor: pointer;
+}
+.lightbox-prev { left: 18px; }
+.lightbox-next { right: 78px; }
+.lightbox-thumbs {
+  display: none;
+  max-width: min(1120px, 96vw);
+  gap: 8px;
+  overflow-x: auto;
+  padding: 2px 0 6px;
+}
+.lightbox-thumbs.is-visible { display: flex; }
+.lightbox-thumbs button {
+  width: 76px;
+  height: 50px;
+  flex: 0 0 auto;
+  padding: 0;
+  overflow: hidden;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  background: transparent;
+  cursor: pointer;
+}
+.lightbox-thumbs button.is-active { border-color: #7dd3c7; }
+.lightbox-thumbs img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: none;
 }
 
 .contact-band {
@@ -1224,21 +1286,21 @@ footer {
         <p>官网使用真实业务现场素材，客户可以先看装货场景、交车流程、车厢结构和内饰细节，再预约到店看车。</p>
       </div>
       <div class="showcase-grid">
-        <figure class="showcase-card">
-          <img src="assets/real/site-yard-wide.jpg" alt="成都新三程新能源货车场地风采">
-          <figcaption><strong>场地风采</strong><span>新车、二手车和待交付车辆集中展示，到店可以现场对比。</span></figcaption>
+        <figure class="showcase-card" data-gallery-key="yard">
+          <img src="assets/real/gallery-yard-02.jpg" data-gallery-key="yard" alt="成都新三程新能源货车场地风采">
+          <figcaption><strong>场地风采</strong><span>新车、二手车和待交付车辆集中展示，到店可以现场对比。</span><span class="gallery-badge">点击查看 5 张</span></figcaption>
         </figure>
-        <figure class="showcase-card">
-          <img src="assets/real/loading-truck.jpg" alt="新能源货车装车发运现场">
-          <figcaption><strong>装车发运场景</strong><span>高栏车适合批量配送、建材、零担和城际运输。</span></figcaption>
+        <figure class="showcase-card" data-gallery-key="loading">
+          <img src="assets/real/gallery-loading-01.jpg" data-gallery-key="loading" alt="新能源货车装车发运现场">
+          <figcaption><strong>装车发运场景</strong><span>高栏车适合批量配送、建材、零担和城际运输。</span><span class="gallery-badge">点击查看 6 张</span></figcaption>
         </figure>
-        <figure class="showcase-card">
-          <img src="assets/real/newcar-style-green-front.jpg" alt="新能源仓栅式货车新车风采">
-          <figcaption><strong>新车风采</strong><span>仓栅式4.2米新车外观、车厢和配置都可以现场确认。</span></figcaption>
+        <figure class="showcase-card" data-gallery-key="newcar">
+          <img src="assets/real/gallery-newcar-01.jpg" data-gallery-key="newcar" alt="新能源仓栅式货车新车风采">
+          <figcaption><strong>新车风采</strong><span>仓栅式4.2米新车外观、车厢和配置都可以现场确认。</span><span class="gallery-badge">点击查看 6 张</span></figcaption>
         </figure>
-        <figure class="showcase-card">
-          <img src="assets/real/usedcar-style-front.jpg" alt="二手新能源仓栅式货车实车风采">
-          <figcaption><strong>二手车风采</strong><span>二手车一车一况，先看实车外观、车厢和驾驶室状态。</span></figcaption>
+        <figure class="showcase-card" data-gallery-key="usedcar">
+          <img src="assets/real/gallery-usedcar-01.jpg" data-gallery-key="usedcar" alt="二手新能源仓栅式货车实车风采">
+          <figcaption><strong>二手车风采</strong><span>二手车一车一况，先看实车外观、车厢和驾驶室状态。</span><span class="gallery-badge">点击查看 5 张</span></figcaption>
         </figure>
       </div>
     </div>
@@ -1316,30 +1378,137 @@ footer {
   </div>
 </footer>
 <div class="image-lightbox" id="imageLightbox" aria-hidden="true">
-  <button type="button" aria-label="关闭图片">×</button>
+  <button class="lightbox-close" type="button" aria-label="关闭图片">×</button>
+  <button class="lightbox-nav lightbox-prev" type="button" aria-label="上一张">‹</button>
   <img src="" alt="">
+  <button class="lightbox-nav lightbox-next" type="button" aria-label="下一张">›</button>
+  <div class="lightbox-caption"></div>
+  <div class="lightbox-thumbs" aria-label="相册缩略图"></div>
 </div>
 <script>
+const galleries = {
+  yard: [
+    { src: 'assets/real/gallery-yard-01.jpg', alt: '新能源货车场地展示 1' },
+    { src: 'assets/real/gallery-yard-02.jpg', alt: '新能源货车场地展示 2' },
+    { src: 'assets/real/gallery-yard-03.jpg', alt: '新能源货车场地展示 3' },
+    { src: 'assets/real/gallery-yard-04.jpg', alt: '新能源货车场地展示 4' },
+    { src: 'assets/real/gallery-yard-05.jpg', alt: '新能源货车场地展示 5' }
+  ],
+  loading: [
+    { src: 'assets/real/gallery-loading-01.jpg', alt: '新能源货车装车发运 1' },
+    { src: 'assets/real/gallery-loading-02.jpg', alt: '新能源货车装车发运 2' },
+    { src: 'assets/real/gallery-loading-03.jpg', alt: '新能源货车装车发运 3' },
+    { src: 'assets/real/gallery-loading-04.jpg', alt: '新能源货车装车发运 4' },
+    { src: 'assets/real/gallery-loading-05.jpg', alt: '新能源货车装车发运 5' },
+    { src: 'assets/real/gallery-loading-06.jpg', alt: '新能源货车装车发运 6' }
+  ],
+  newcar: [
+    { src: 'assets/real/gallery-newcar-01.jpg', alt: '新能源仓栅式新车外观 1' },
+    { src: 'assets/real/gallery-newcar-02.jpg', alt: '新能源仓栅式新车外观 2' },
+    { src: 'assets/real/gallery-newcar-03.jpg', alt: '新能源仓栅式新车外观 3' },
+    { src: 'assets/real/gallery-newcar-04.jpg', alt: '新能源仓栅式新车外观 4' },
+    { src: 'assets/real/gallery-newcar-05.jpg', alt: '新能源货车驾驶室内饰' },
+    { src: 'assets/real/gallery-newcar-06.jpg', alt: '新能源货车仪表细节' }
+  ],
+  usedcar: [
+    { src: 'assets/real/gallery-usedcar-01.jpg', alt: '二手新能源仓栅式货车 1' },
+    { src: 'assets/real/gallery-usedcar-02.jpg', alt: '二手新能源仓栅式货车 2' },
+    { src: 'assets/real/gallery-usedcar-03.jpg', alt: '二手新能源仓栅式货车 3' },
+    { src: 'assets/real/gallery-usedcar-04.jpg', alt: '二手新能源仓栅式货车 4' },
+    { src: 'assets/real/gallery-usedcar-05.jpg', alt: '二手新能源仓栅式货车 5' }
+  ]
+};
 const lightbox = document.getElementById('imageLightbox');
 const lightboxImg = lightbox.querySelector('img');
+const closeButton = lightbox.querySelector('.lightbox-close');
+const prevButton = lightbox.querySelector('.lightbox-prev');
+const nextButton = lightbox.querySelector('.lightbox-next');
+const lightboxCaption = lightbox.querySelector('.lightbox-caption');
+const lightboxThumbs = lightbox.querySelector('.lightbox-thumbs');
+let currentGallery = [];
+let currentIndex = 0;
+
+function renderLightbox() {
+  const item = currentGallery[currentIndex];
+  if (!item) return;
+  lightboxImg.src = item.src;
+  lightboxImg.alt = item.alt || '图片放大查看';
+  lightboxCaption.textContent = currentGallery.length > 1 ? `${item.alt || '图片'} · ${currentIndex + 1}/${currentGallery.length}` : (item.alt || '');
+  const isGallery = currentGallery.length > 1;
+  prevButton.style.display = isGallery ? 'block' : 'none';
+  nextButton.style.display = isGallery ? 'block' : 'none';
+  lightboxThumbs.classList.toggle('is-visible', isGallery);
+  if (isGallery) {
+    lightboxThumbs.innerHTML = currentGallery.map((galleryItem, index) => (
+      `<button type="button" class="${index === currentIndex ? 'is-active' : ''}" data-index="${index}" aria-label="查看第${index + 1}张"><img src="${galleryItem.src}" alt=""></button>`
+    )).join('');
+  } else {
+    lightboxThumbs.innerHTML = '';
+  }
+}
+
+function openItems(items, startIndex = 0) {
+  currentGallery = items;
+  currentIndex = startIndex;
+  renderLightbox();
+  lightbox.classList.add('is-open');
+  lightbox.setAttribute('aria-hidden', 'false');
+}
+
+function openGallery(key) {
+  const items = galleries[key];
+  if (items && items.length) openItems(items, 0);
+}
+
+function moveGallery(step) {
+  if (!currentGallery.length) return;
+  currentIndex = (currentIndex + step + currentGallery.length) % currentGallery.length;
+  renderLightbox();
+}
+
 document.querySelectorAll('main img').forEach((img) => {
-  img.addEventListener('click', () => {
-    lightboxImg.src = img.dataset.full || img.currentSrc || img.src;
-    lightboxImg.alt = img.alt || '图片放大查看';
-    lightbox.classList.add('is-open');
-    lightbox.setAttribute('aria-hidden', 'false');
+  img.addEventListener('click', (event) => {
+    event.stopPropagation();
+    if (img.dataset.galleryKey) {
+      openGallery(img.dataset.galleryKey);
+      return;
+    }
+    openItems([{ src: img.dataset.full || img.currentSrc || img.src, alt: img.alt || '图片放大查看' }], 0);
   });
+});
+document.querySelectorAll('.showcase-card[data-gallery-key]').forEach((card) => {
+  card.addEventListener('click', () => openGallery(card.dataset.galleryKey));
 });
 function closeLightbox() {
   lightbox.classList.remove('is-open');
   lightbox.setAttribute('aria-hidden', 'true');
   lightboxImg.src = '';
+  lightboxThumbs.innerHTML = '';
+  currentGallery = [];
+  currentIndex = 0;
 }
+closeButton.addEventListener('click', closeLightbox);
+prevButton.addEventListener('click', (event) => {
+  event.stopPropagation();
+  moveGallery(-1);
+});
+nextButton.addEventListener('click', (event) => {
+  event.stopPropagation();
+  moveGallery(1);
+});
+lightboxThumbs.addEventListener('click', (event) => {
+  const button = event.target.closest('button[data-index]');
+  if (!button) return;
+  currentIndex = Number(button.dataset.index);
+  renderLightbox();
+});
 lightbox.addEventListener('click', (event) => {
-  if (event.target === lightbox || event.target.tagName === 'BUTTON') closeLightbox();
+  if (event.target === lightbox) closeLightbox();
 });
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') closeLightbox();
+  if (lightbox.classList.contains('is-open') && event.key === 'ArrowLeft') moveGallery(-1);
+  if (lightbox.classList.contains('is-open') && event.key === 'ArrowRight') moveGallery(1);
 });
 </script>
 </body>
