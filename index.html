@@ -536,6 +536,10 @@ section { padding: 78px 0; }
   gap: 24px;
   align-items: start;
 }
+.case-list {
+  display: grid;
+  gap: 26px;
+}
 .case-summary {
   padding: 28px;
   background: rgba(255,255,255,.08);
@@ -584,6 +588,45 @@ section { padding: 78px 0; }
 .case-note {
   margin: 10px 0 0;
   color: #cbd5e1;
+  font-size: 13px;
+}
+.partial-flow {
+  background: var(--panel);
+}
+.flow-sample-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+.flow-sample-card {
+  margin: 0;
+  overflow: hidden;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+.flow-sample-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 7;
+  object-fit: cover;
+  cursor: zoom-in;
+}
+.flow-sample-card figcaption {
+  padding: 14px;
+}
+.flow-sample-card strong {
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-sample-card span {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.45;
+}
+.flow-sample-note {
+  margin: 16px 0 0;
+  color: var(--muted);
   font-size: 13px;
 }
 .coverage-row {
@@ -801,6 +844,7 @@ footer {
   .process-grid,
   .showcase-grid,
   .proof-grid,
+  .flow-sample-grid,
   .case-layout {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -838,6 +882,7 @@ footer {
   .process-grid,
   .showcase-grid,
   .proof-grid,
+  .flow-sample-grid,
   .case-layout,
   .case-stats {
     grid-template-columns: 1fr;
@@ -1059,33 +1104,89 @@ footer {
       <div class="section-head">
         <div>
           <p class="section-kicker">DRIVER CASE</p>
-          <h2>朱师傅加入新三程，一个月流水约2.69万。</h2>
+          <h2>真实流水案例：朱加平、何春林两位司机。</h2>
         </div>
-        <p>总览和明细来自同一后台。官网展示已做隐私处理，完整订单明细到公司现场打开后台核验。</p>
+        <p>这里只展示能对上总流水和日常明细的案例。官网图片已做隐私处理，完整订单明细到公司现场打开后台核验。</p>
       </div>
-      <div class="case-layout">
-        <div class="case-summary">
-          <h3>朱师傅月度流水：26900元</h3>
-          <p>后台总览显示朱加平师傅绑定车辆后，当月总流水26900元，未付0，利润金额26900元。下方订单明细展示其日常跑车记录，单笔金额多在750-1200元区间，状态为已完成、已支付。</p>
-          <div class="case-stats">
-            <span>总流水 26900元</span>
-            <span>未付 0元</span>
-            <span>利润金额 26900元</span>
-            <span>明细现场核验</span>
+      <div class="case-list">
+        <article class="case-layout">
+          <div class="case-summary">
+            <h3>朱师傅月度流水：26900元</h3>
+            <p>后台总览显示朱加平师傅绑定车辆后，当月总流水26900元，未付0，利润金额26900元。下方订单明细展示其日常跑车记录，单笔金额多在750-1200元区间，状态为已完成、已支付。</p>
+            <div class="case-stats">
+              <span>总流水 26900元</span>
+              <span>未付 0元</span>
+              <span>利润金额 26900元</span>
+              <span>明细可核验</span>
+            </div>
+            <p class="case-note">说明：明细图为后台一屏订单记录，客户电话、地址等隐私已模糊；完整明细与总流水到店核验。</p>
           </div>
-          <p class="case-note">说明：明细图为后台一屏订单记录，客户电话、地址等隐私已模糊；完整明细与总流水到店核验。</p>
-        </div>
-        <div class="case-proof-grid">
-          <figure class="case-proof">
-            <img src="assets/real/driver-zhu-total-preview.jpg" data-full="assets/real/driver-zhu-total-detail.jpg" alt="朱师傅月度总流水26900后台总览">
-            <figcaption>总流水总览：26900元</figcaption>
-          </figure>
-          <figure class="case-proof tall">
-            <img src="assets/real/driver-zhu-orders-preview.jpg" data-full="assets/real/driver-zhu-orders-detail.jpg" alt="朱师傅日常跑车订单明细">
-            <figcaption>日常跑车明细：订单号、金额、支付状态和接单司机可核验</figcaption>
-          </figure>
-        </div>
+          <div class="case-proof-grid">
+            <figure class="case-proof">
+              <img src="assets/real/driver-zhu-total-preview.jpg" data-full="assets/real/driver-zhu-total-detail.jpg" alt="朱师傅月度总流水26900后台总览">
+              <figcaption>总流水总览：26900元</figcaption>
+            </figure>
+            <figure class="case-proof tall">
+              <img src="assets/real/driver-zhu-orders-preview.jpg" data-full="assets/real/driver-zhu-orders-detail.jpg" alt="朱师傅日常跑车订单明细">
+              <figcaption>日常跑车明细：订单号、金额、支付状态和接单司机可核验</figcaption>
+            </figure>
+          </div>
+        </article>
+        <article class="case-layout">
+          <div class="case-summary">
+            <h3>何师傅月度流水：25537元</h3>
+            <p>何春林师傅后台总流水25537元，未付0，利润金额25537元。明细记录显示多笔已完成、已支付订单，单笔金额集中在850-1150元区间，司机姓名与总流水记录可以对应。</p>
+            <div class="case-stats">
+              <span>总流水 25537元</span>
+              <span>未付 0元</span>
+              <span>利润金额 25537元</span>
+              <span>明细可核验</span>
+            </div>
+            <p class="case-note">说明：总览保留姓名、车牌和金额用于核验；明细保留订单金额、支付状态、接单司机和时间。</p>
+          </div>
+          <div class="case-proof-grid">
+            <figure class="case-proof">
+              <img src="assets/real/driver-he-total-preview.jpg" data-full="assets/real/driver-he-total-detail.jpg" alt="何师傅月度总流水25537后台总览">
+              <figcaption>总流水总览：25537元</figcaption>
+            </figure>
+            <figure class="case-proof tall">
+              <img src="assets/real/driver-he-orders-preview.jpg" data-full="assets/real/driver-he-orders-detail.jpg" alt="何师傅日常跑车订单明细">
+              <figcaption>日常跑车明细：金额、状态、接单司机和时间可核验</figcaption>
+            </figure>
+          </div>
+        </article>
       </div>
+    </div>
+  </section>
+
+  <section class="partial-flow">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">REVENUE PROOF</p>
+          <h2>部分流水展示，先看真实后台再到店细聊。</h2>
+        </div>
+        <p>总流水看月度结果，明细看每天实际跑车记录。图片可点开放大，客户电话和地址已做隐私处理。</p>
+      </div>
+      <div class="flow-sample-grid">
+        <figure class="flow-sample-card">
+          <img src="assets/real/driver-zhu-total-preview.jpg" data-full="assets/real/driver-zhu-total-detail.jpg" alt="朱加平总流水26900">
+          <figcaption><strong>朱加平总流水</strong><span>月度总流水26900元，未付0元。</span></figcaption>
+        </figure>
+        <figure class="flow-sample-card">
+          <img src="assets/real/driver-zhu-orders-preview.jpg" data-full="assets/real/driver-zhu-orders-detail.jpg" alt="朱加平流水明细">
+          <figcaption><strong>朱加平明细</strong><span>订单金额、完成状态、支付状态可现场核验。</span></figcaption>
+        </figure>
+        <figure class="flow-sample-card">
+          <img src="assets/real/driver-he-total-preview.jpg" data-full="assets/real/driver-he-total-detail.jpg" alt="何春林总流水25537">
+          <figcaption><strong>何春林总流水</strong><span>月度总流水25537元，未付0元。</span></figcaption>
+        </figure>
+        <figure class="flow-sample-card">
+          <img src="assets/real/driver-he-orders-preview.jpg" data-full="assets/real/driver-he-orders-detail.jpg" alt="何春林流水明细">
+          <figcaption><strong>何春林明细</strong><span>多笔已完成已支付订单，接单司机可对应。</span></figcaption>
+        </figure>
+      </div>
+      <p class="flow-sample-note">提示：官网只展示部分截图，完整流水和订单明细以公司现场后台核验为准。</p>
     </div>
   </section>
 
