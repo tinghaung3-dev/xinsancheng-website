@@ -336,10 +336,18 @@ section { padding: 76px 0; }
   border-radius: 8px;
   box-shadow: 0 14px 34px rgba(22, 32, 51, .09);
 }
-.workflow-card img {
+.workflow-card .workflow-photo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  padding: 6px;
+  background: #eef3f7;
+}
+.workflow-card .workflow-photo-grid img {
   width: 100%;
-  aspect-ratio: 1.2;
+  aspect-ratio: 1.05;
   object-fit: cover;
+  border-radius: 5px;
 }
 .workflow-card div {
   padding: 18px;
@@ -547,19 +555,39 @@ footer {
       </div>
       <div class="workflow-grid">
         <article class="workflow-card">
-          <img src="assets/real/driver-interview.jpg" alt="司机到成都新三程公司面试">
+          <div class="workflow-photo-grid">
+            <img src="assets/real/driver-interview.jpg" alt="司机到成都新三程公司面试">
+            <img src="assets/real/driver-interview-2.jpg" alt="司机面试沟通合作细节">
+            <img src="assets/real/driver-interview-3.jpg" alt="司机到公司现场沟通">
+            <img src="assets/real/driver-office.jpg" alt="成都新三程办公区域面谈">
+          </div>
           <div><strong>STEP 01</strong><h3>到公司面试</h3><p>确认驾驶经验、合作城市、路线意向和费用承受范围，先判断是否适合合作。</p></div>
         </article>
         <article class="workflow-card">
-          <img src="assets/real/driver-flow-proof.jpg" alt="司机合作公司流水隐私处理展示">
+          <div class="workflow-photo-grid">
+            <img src="assets/real/driver-flow-proof.jpg" alt="司机合作公司流水隐私处理展示">
+            <img src="assets/real/driver-flow-proof-2.jpg" alt="司机合作流水后台样张">
+            <img src="assets/real/driver-dispatch.jpg" alt="调度沟通货源和路线">
+            <img src="assets/real/driver-company-front.jpg" alt="公司门头和车辆展示">
+          </div>
           <div><strong>STEP 02</strong><h3>了解公司流水</h3><p>现场说明后台流水、订单来源、结算周期和成本扣减，不用空口承诺。</p></div>
         </article>
         <article class="workflow-card">
-          <img src="assets/real/driver-training.jpg" alt="成都新三程司机培训和调度会议">
+          <div class="workflow-photo-grid">
+            <img src="assets/real/driver-training.jpg" alt="成都新三程司机培训和调度会议">
+            <img src="assets/real/driver-training-2.jpg" alt="司机培训和运营沟通">
+            <img src="assets/real/driver-dispatch-meeting.jpg" alt="调度会议和货源讨论">
+            <img src="assets/real/driver-dispatch.jpg" alt="调度现场说明路线">
+          </div>
           <div><strong>STEP 03</strong><h3>上岗培训</h3><p>培训车辆使用、充电注意事项、接单规则、费用边界和日常运营要求。</p></div>
         </article>
         <article class="workflow-card">
-          <img src="assets/real/driver-delivery-training.jpg" alt="新能源货车交车及提车培训">
+          <div class="workflow-photo-grid">
+            <img src="assets/real/driver-delivery-training.jpg" alt="新能源货车交车及提车培训">
+            <img src="assets/real/driver-delivery-2.jpg" alt="新能源仓栅式货车交车现场">
+            <img src="assets/real/driver-delivery-3.jpg" alt="司机提车合影">
+            <img src="assets/real/driver-handoff.jpg" alt="司机合作交车现场">
+          </div>
           <div><strong>STEP 04</strong><h3>提车及提车培训</h3><p>交付时核对车况、资料、保险和操作事项，确认后再正式上路。</p></div>
         </article>
       </div>
