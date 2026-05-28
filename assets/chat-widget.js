@@ -2,10 +2,7 @@
   if (window.XSCChatWidgetLoaded) return;
   window.XSCChatWidgetLoaded = true;
 
-  const apiBase = window.location.protocol === 'https:'
-    ? 'https://openclaw.xinsancheng.cn'
-    : 'http://openclaw.xinsancheng.cn';
-  const apiUrl = `${apiBase}/api/chat`;
+  const apiUrl = 'https://openclaw.xinsancheng.cn/api/chat';
   const history = [];
 
   const widget = document.createElement('div');
