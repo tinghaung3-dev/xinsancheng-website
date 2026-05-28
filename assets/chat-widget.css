@@ -76,14 +76,21 @@
 }
 
 .xsc-chat-mark {
-  width: 36px;
-  height: 36px;
+  width: 38px;
+  height: 38px;
   display: grid;
   place-items: center;
   flex: 0 0 auto;
+  padding: 4px;
   border-radius: 10px;
-  background: #0f766e;
-  font-weight: 900;
+  background: #fff;
+  overflow: hidden;
+}
+
+.xsc-chat-mark img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .xsc-chat-title strong,

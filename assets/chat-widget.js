@@ -18,7 +18,7 @@
     <section class="xsc-chat-panel" aria-hidden="true" aria-label="成都新三程 AI 客服">
       <div class="xsc-chat-head">
         <div class="xsc-chat-title">
-          <span class="xsc-chat-mark">新</span>
+          <span class="xsc-chat-mark"><img src="assets/brand/xinsancheng-logo-mark.png" alt=""></span>
           <div><strong>新三程 AI 客服</strong><small>租车、买车、司机合作都可以先问</small></div>
         </div>
         <button class="xsc-chat-close" type="button" aria-label="关闭">×</button>
