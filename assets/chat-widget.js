@@ -2,7 +2,7 @@
   if (window.XSCChatWidgetLoaded) return;
   window.XSCChatWidgetLoaded = true;
 
-  const apiUrl = 'https://openclaw.xinsancheng.cn/api/chat';
+  const apiUrl = 'https://openclaw.xinsancheng.cn:8443/api/chat';
   const history = [];
 
   const widget = document.createElement('div');
