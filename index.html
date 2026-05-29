@@ -743,6 +743,88 @@ section { padding: 78px 0; }
   color: var(--muted);
 }
 
+.ops-band {
+  background: #0f172a;
+  color: var(--white);
+}
+.ops-band .section-kicker { color: #7dd3c7; }
+.ops-band .section-head p { color: #cbd5e1; }
+.ops-layout {
+  display: grid;
+  grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr);
+  gap: 22px;
+  align-items: stretch;
+}
+.ops-panel {
+  padding: 30px;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 8px;
+}
+.ops-panel h3 {
+  margin: 0 0 12px;
+  font-size: clamp(26px, 3vw, 40px);
+  line-height: 1.15;
+}
+.ops-panel p {
+  margin: 0;
+  color: #d9e3ec;
+}
+.ops-metrics {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 22px 0;
+}
+.ops-metrics span {
+  padding: 14px;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 6px;
+}
+.ops-metrics strong {
+  display: block;
+  color: #f7c47d;
+  font-size: 26px;
+  line-height: 1;
+}
+.ops-metrics small {
+  display: block;
+  margin-top: 8px;
+  color: #cbd5e1;
+  font-size: 12px;
+}
+.ops-screen {
+  padding: 18px;
+  background: #f8fafc;
+  border-radius: 8px;
+  color: var(--ink);
+}
+.ops-screen-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+  color: #344054;
+  font-size: 13px;
+  font-weight: 800;
+}
+.ops-screen-grid {
+  display: grid;
+  gap: 10px;
+}
+.ops-screen-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  padding: 13px 14px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+.ops-screen-row span { color: var(--muted); font-size: 13px; }
+.ops-screen-row strong { color: var(--brand-dark); }
+
 .proof {
   color: var(--white);
   background: #111827;
@@ -916,6 +998,7 @@ footer {
   .process-grid,
   .showcase-grid,
   .proof-grid,
+  .ops-layout,
   .flow-sample-grid,
   .case-layout {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -957,6 +1040,8 @@ footer {
   .process-grid,
   .showcase-grid,
   .proof-grid,
+  .ops-layout,
+  .ops-metrics,
   .flow-sample-grid,
   .case-layout,
   .case-stats {
@@ -1008,6 +1093,7 @@ footer {
       <a href="#fleet">车型方案</a>
       <a href="#sales">新车销售</a>
       <a href="#drivers">司机合作</a>
+      <a href="/wuliu.html">物流看板</a>
       <a href="#process">合作流程</a>
     </nav>
     <a class="phone-link" href="tel:13086677171">13086677171</a>
@@ -1349,6 +1435,43 @@ footer {
           <h3>运营跟进服务</h3>
           <p>交车后继续处理维修、年审、违章、换车、转购和司机运营问题。</p>
         </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="ops" class="ops-band">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">OPS SYSTEM</p>
+          <h2>车辆、司机、物流订单和回款，用系统串起来。</h2>
+        </div>
+        <p>新三程正在把车辆资产、GPS定位、司机流水和新满运达物流调度系统整合到统一运营看板，减少靠聊天记录和表格反复核对。</p>
+      </div>
+      <div class="ops-layout">
+        <div class="ops-panel">
+          <h3>新满运达物流运营看板已接入。</h3>
+          <p>官网只展示脱敏运营能力，真实订单、司机、位置和流水在授权后台查看。对司机合作客户来说，重点是公司不是只租车，还能持续跟进车辆、路线和结算。</p>
+          <div class="ops-metrics">
+            <span><strong>订单</strong><small>干线订单与派单状态</small></span>
+            <span><strong>流水</strong><small>流水、报销、未付款分开看</small></span>
+            <span><strong>司机</strong><small>司机流水和车辆绑定</small></span>
+            <span><strong>位置</strong><small>司机位置与车辆在线状态</small></span>
+          </div>
+          <div class="focus-actions">
+            <a class="button primary" href="/wuliu.html">查看物流看板</a>
+            <a class="button secondary" href="tel:13086677171">咨询运营合作</a>
+          </div>
+        </div>
+        <div class="ops-screen" aria-label="物流运营看板预览">
+          <div class="ops-screen-head"><span>新满运达 / 干线物流</span><span>已接入</span></div>
+          <div class="ops-screen-grid">
+            <div class="ops-screen-row"><span>订单调度</span><strong>每日司机订单</strong></div>
+            <div class="ops-screen-row"><span>经营口径</span><strong>流水 - 报销 = 留存</strong></div>
+            <div class="ops-screen-row"><span>风控提醒</span><strong>未付款流水单独追踪</strong></div>
+            <div class="ops-screen-row"><span>车辆协同</span><strong>车辆、司机、位置联动</strong></div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
