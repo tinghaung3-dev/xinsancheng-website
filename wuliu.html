@@ -11,67 +11,68 @@
 <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
 <link rel="stylesheet" href="assets/chat-widget.css">
 <style>
-:root{--ink:#162033;--muted:#5c6678;--line:#dfe5ee;--panel:#f6f8fb;--brand:#0f766e;--brand-dark:#0b4f4a;--accent:#c47a2c;--white:#fff;--shadow:0 18px 42px rgba(22,32,51,.13)}
-*{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.65}a{color:inherit;text-decoration:none}.container{width:min(1180px,calc(100% - 40px));margin:0 auto}.site-header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);border-bottom:1px solid rgba(223,229,238,.9);backdrop-filter:blur(14px)}.header-inner{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:14px;min-width:300px;font-weight:800}.brand-logo{width:clamp(210px,23vw,288px);height:auto;max-height:48px;object-fit:contain}.brand-tagline{display:inline-flex;align-items:center;min-height:34px;padding-left:14px;border-left:1px solid rgba(15,118,110,.22);color:var(--muted);font-size:12px;font-weight:700;line-height:1.35}.nav{display:flex;gap:20px;color:#344054;font-size:14px}.phone-link{min-height:40px;display:inline-flex;align-items:center;padding:0 16px;color:#fff;background:var(--brand-dark);border-radius:6px;font-weight:800}.button{min-height:48px;display:inline-flex;align-items:center;justify-content:center;padding:0 22px;border:1px solid transparent;border-radius:6px;font-weight:900}.button.primary{color:#fff;background:var(--accent)}.button.secondary{color:#fff;border-color:rgba(255,255,255,.58)}section{padding:76px 0}.hero{color:#fff;background:linear-gradient(135deg,#0b1827 0%,#13283b 54%,#0b4f4a 100%)}.hero-inner{padding:108px 0 58px}.eyebrow{margin:0 0 18px;color:#7dd3c7;font-size:14px;font-weight:900;text-transform:uppercase}.hero h1{max-width:820px;margin:0;font-size:clamp(38px,6vw,72px);line-height:1.08}.hero p{max-width:720px;margin:24px 0 0;color:#d9e3ec;font-size:18px}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}.metric-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:44px}.metric{min-height:126px;padding:18px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:8px}.metric strong{display:block;color:#f7c47d;font-size:28px;line-height:1.1}.metric span{display:block;margin-top:8px;color:#d9e3ec;font-size:13px}.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;margin-bottom:34px}.section-kicker{margin:0 0 10px;color:var(--brand);font-size:13px;font-weight:900;text-transform:uppercase}.section-head h2{max-width:760px;margin:0;font-size:clamp(28px,3.8vw,48px);line-height:1.15}.section-head p{max-width:440px;margin:0;color:var(--muted)}.grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.card{padding:24px;background:#fff;border:1px solid var(--line);border-radius:8px;box-shadow:var(--shadow)}.card strong{display:block;margin-bottom:8px;font-size:22px}.card p{margin:0;color:var(--muted)}.panel{background:var(--panel)}.split{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:24px;align-items:start}.dark-card{padding:28px;color:#fff;background:#111827;border-radius:8px}.dark-card h2{margin:0 0 14px;font-size:clamp(28px,4vw,44px);line-height:1.12}.dark-card p{margin:0;color:#cbd5e1}.flow-list{display:grid;gap:10px;margin-top:22px}.flow-list div{display:grid;grid-template-columns:1fr auto;gap:12px;padding:13px 14px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:6px}.flow-list span{color:#cbd5e1}.flow-list b{color:#f7c47d}.embed-box{overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:8px;box-shadow:var(--shadow)}.embed-head{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 16px;border-bottom:1px solid var(--line);font-weight:900}.embed-head span{color:var(--muted);font-size:13px;font-weight:700}.embed-box iframe{display:block;width:100%;height:720px;border:0;background:#fff}.notice{margin-top:14px;color:var(--muted);font-size:13px}.contact{color:#fff;background:var(--brand-dark)}.contact-box{display:flex;align-items:center;justify-content:space-between;gap:24px}.contact h2{margin:0;font-size:clamp(30px,4vw,52px);line-height:1.12}.contact p{margin:12px 0 0;color:#cbd5e1}footer{padding:26px 0;color:#667085;background:var(--panel);border-top:1px solid var(--line)}.footer-inner{display:flex;justify-content:space-between;gap:20px}
-@media(max-width:980px){.nav{display:none}.metric-grid,.grid-3,.split{grid-template-columns:repeat(2,minmax(0,1fr))}.section-head,.contact-box,.footer-inner{align-items:flex-start;flex-direction:column}.embed-box iframe{height:640px}}@media(max-width:640px){.container,.hero-inner{width:min(100% - 28px,1180px)}.brand{min-width:0}.brand-logo{width:188px;max-height:40px}.brand-tagline,.phone-link{display:none}.hero-inner{padding:86px 0 32px}.hero p{font-size:16px}.actions{flex-direction:column}.button{width:100%}.metric-grid,.grid-3,.split{grid-template-columns:1fr}section{padding:56px 0}.embed-box iframe{height:620px}}
+:root{--ink:#162033;--muted:#5c6678;--line:#dfe5ee;--panel:#f6f8fb;--brand:#0b4f4a;--accent:#c47a2c;--white:#fff;--shadow:0 18px 42px rgba(22,32,51,.1)}
+*{box-sizing:border-box}
+body{min-height:100vh;margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",Arial,sans-serif;color:var(--ink);background:var(--panel);line-height:1.65}
+a{color:inherit;text-decoration:none}
+.container{width:min(920px,calc(100% - 40px));margin:0 auto}
+.site-header{background:#fff;border-bottom:1px solid var(--line)}
+.header-inner{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:14px;font-weight:800}
+.brand-logo{width:clamp(210px,23vw,288px);height:auto;max-height:48px;object-fit:contain}
+.brand-tagline{padding-left:14px;border-left:1px solid rgba(15,118,110,.22);color:var(--muted);font-size:12px;font-weight:700}
+.back-link{color:var(--brand);font-size:14px;font-weight:800}
+main{padding:74px 0}
+.portal{padding:34px;background:#fff;border:1px solid var(--line);border-radius:8px;box-shadow:var(--shadow)}
+.portal-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:24px;padding-bottom:18px;border-bottom:1px solid var(--line)}
+.portal-head p{margin:0;color:var(--muted)}
+h1{margin:0 0 8px;font-size:clamp(30px,5vw,46px);line-height:1.14}
+.portal-list{display:grid;gap:12px}
+.portal-item{display:grid;grid-template-columns:1fr auto;align-items:center;gap:16px;padding:18px;border:1px solid var(--line);border-radius:8px;background:#fff}
+.portal-item strong{display:block;font-size:20px}
+.portal-item span{display:block;margin-top:2px;color:var(--muted);font-size:14px}
+.button{min-height:44px;display:inline-flex;align-items:center;justify-content:center;padding:0 20px;color:#fff;background:var(--accent);border-radius:6px;font-weight:900;white-space:nowrap}
+.notice{margin:18px 0 0;color:var(--muted);font-size:13px}
+footer{padding:24px 0;color:#667085;background:#fff;border-top:1px solid var(--line);font-size:14px}
+.footer-inner{display:flex;justify-content:space-between;gap:20px}
+@media(max-width:640px){.container{width:min(100% - 28px,920px)}.brand-logo{width:188px}.brand-tagline{display:none}.portal{padding:22px}.portal-head,.portal-item,.footer-inner{align-items:flex-start;grid-template-columns:1fr;flex-direction:column}.button{width:100%}}
 </style>
 </head>
 <body>
 <header class="site-header">
   <div class="container header-inner">
     <a class="brand" href="/"><span><img class="brand-logo" src="assets/brand/xinsancheng-logo-full.png" alt="成都新三程汽车销售"></span><span class="brand-tagline">新能源货车资产与运营服务</span></a>
-    <nav class="nav" aria-label="主导航"><a href="/">首页</a><a href="/zuling.html">货车租赁</a><a href="/xinche.html">新车销售</a><a href="/zhaopin.html">司机合作</a></nav>
-    <a class="phone-link" href="tel:13086677171">13086677171</a>
+    <a class="back-link" href="/">返回官网</a>
   </div>
 </header>
 <main>
-  <section class="hero">
-    <div class="container hero-inner">
-      <p class="eyebrow">Internal Portal</p>
-      <h1>内部系统入口。</h1>
-      <p>这个页面只作为新三程内部人员进入车管系统和物流系统的入口，不作为对外客户宣传页面。车辆、司机、订单、流水等明细均在授权后台查看。</p>
-      <div class="actions"><a class="button primary" href="#systems">进入系统入口</a><a class="button secondary" href="/">返回官网首页</a></div>
-    </div>
-  </section>
-
-  <section id="systems">
-    <div class="container">
-      <div class="section-head"><div><p class="section-kicker">SYSTEM ENTRANCE</p><h2>车管系统和物流系统分开进入。</h2></div><p>官网只放入口，不保存账号密码，也不公开订单、司机位置、流水和合同明细。</p></div>
-      <div class="grid-3">
-        <article class="card">
-          <strong>车管系统</strong>
-          <p>管理车辆资产、司机合作、合同、GPS、交付、售后和运营跟进。</p>
-          <p class="notice">当前为本机/内网入口，外部访客无法直接访问。</p>
-          <div class="actions"><a class="button primary" href="http://127.0.0.1:3020/" target="_blank" rel="noreferrer">打开车管系统</a></div>
-        </article>
-        <article class="card">
-          <strong>物流系统</strong>
-          <p>进入新满运达物流后台，查看订单、派单、报销、司机流水和回款状态。</p>
-          <p class="notice">如嵌入窗口无法登录，使用新窗口打开。</p>
-          <div class="actions"><a class="button primary" href="https://saas.junxiaoyao.com/#/" target="_blank" rel="noreferrer">打开物流系统</a></div>
-        </article>
-        <article class="card">
-          <strong>运营看板</strong>
-          <p>把车管和物流数据统一汇总后，用于内部经营分析和异常提醒。</p>
-          <p class="notice">建议后续部署到受密码保护的内部子域名。</p>
-          <div class="actions"><a class="button primary" href="http://127.0.0.1:3020/logistics" target="_blank" rel="noreferrer">打开运营看板</a></div>
-        </article>
+  <div class="container">
+    <section class="portal" aria-label="内部系统入口">
+      <div class="portal-head">
+        <div>
+          <h1>内部系统入口</h1>
+          <p>员工点击对应系统进入后台，官网不展示内部数据。</p>
+        </div>
       </div>
-    </div>
-  </section>
-
-  <section id="system" class="panel">
-    <div class="container">
-      <div class="section-head"><div><p class="section-kicker">LOGISTICS LOGIN</p><h2>物流系统嵌入入口。</h2></div><p>这里保留一个登录窗口，方便内部人员从官网底部入口快速跳转。真实数据仍以授权后台为准。</p></div>
-      <div class="embed-box">
-        <div class="embed-head"><strong>junxiaoyao 物流系统</strong><span><a href="https://saas.junxiaoyao.com/#/" target="_blank" rel="noreferrer">新窗口打开</a></span></div>
-        <iframe src="https://saas.junxiaoyao.com/#/" title="新满运达物流系统"></iframe>
+      <div class="portal-list">
+        <a class="portal-item" href="http://127.0.0.1:3020/" target="_blank" rel="noreferrer">
+          <span><strong>车管系统</strong><span>车辆、司机、合同、GPS、运营跟进</span></span>
+          <span class="button">进入</span>
+        </a>
+        <a class="portal-item" href="https://saas.junxiaoyao.com/#/" target="_blank" rel="noreferrer">
+          <span><strong>物流系统</strong><span>订单、派单、报销、司机流水、回款</span></span>
+          <span class="button">进入</span>
+        </a>
+        <a class="portal-item" href="http://127.0.0.1:3020/logistics" target="_blank" rel="noreferrer">
+          <span><strong>运营看板</strong><span>车管和物流数据汇总、异常提醒</span></span>
+          <span class="button">进入</span>
+        </a>
       </div>
-      <p class="notice">注意：官网不会保存或展示后台账号密码。后台登录、订单明细、司机位置和流水明细均由授权系统处理。</p>
-    </div>
-  </section>
+      <p class="notice">提示：车管系统和运营看板当前是本机地址，只适合本机使用；后续可部署到受密码保护的内部子域名。</p>
+    </section>
+  </div>
 </main>
-<footer><div class="container footer-inner"><span>成都新三程 - 新能源货车资产与物流运营服务</span><span>13086677171</span></div></footer>
+<footer><div class="container footer-inner"><span>成都新三程内部入口</span><span>© 2026 成都新三程</span></div></footer>
 <script src="assets/chat-widget.js" defer></script>
 </body>
 </html>

@@ -743,88 +743,6 @@ section { padding: 78px 0; }
   color: var(--muted);
 }
 
-.ops-band {
-  background: #0f172a;
-  color: var(--white);
-}
-.ops-band .section-kicker { color: #7dd3c7; }
-.ops-band .section-head p { color: #cbd5e1; }
-.ops-layout {
-  display: grid;
-  grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr);
-  gap: 22px;
-  align-items: stretch;
-}
-.ops-panel {
-  padding: 30px;
-  background: rgba(255,255,255,.08);
-  border: 1px solid rgba(255,255,255,.14);
-  border-radius: 8px;
-}
-.ops-panel h3 {
-  margin: 0 0 12px;
-  font-size: clamp(26px, 3vw, 40px);
-  line-height: 1.15;
-}
-.ops-panel p {
-  margin: 0;
-  color: #d9e3ec;
-}
-.ops-metrics {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
-  margin: 22px 0;
-}
-.ops-metrics span {
-  padding: 14px;
-  background: rgba(255,255,255,.08);
-  border: 1px solid rgba(255,255,255,.14);
-  border-radius: 6px;
-}
-.ops-metrics strong {
-  display: block;
-  color: #f7c47d;
-  font-size: 26px;
-  line-height: 1;
-}
-.ops-metrics small {
-  display: block;
-  margin-top: 8px;
-  color: #cbd5e1;
-  font-size: 12px;
-}
-.ops-screen {
-  padding: 18px;
-  background: #f8fafc;
-  border-radius: 8px;
-  color: var(--ink);
-}
-.ops-screen-head {
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
-  margin-bottom: 14px;
-  color: #344054;
-  font-size: 13px;
-  font-weight: 800;
-}
-.ops-screen-grid {
-  display: grid;
-  gap: 10px;
-}
-.ops-screen-row {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 12px;
-  padding: 13px 14px;
-  background: var(--white);
-  border: 1px solid var(--line);
-  border-radius: 6px;
-}
-.ops-screen-row span { color: var(--muted); font-size: 13px; }
-.ops-screen-row strong { color: var(--brand-dark); }
-
 .proof {
   color: var(--white);
   background: #111827;
@@ -979,8 +897,13 @@ footer {
 }
 .footer-inner {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   gap: 20px;
+}
+.footer-link {
+  color: var(--brand-dark);
+  font-weight: 800;
 }
 
 @media (max-width: 980px) {
@@ -998,7 +921,6 @@ footer {
   .process-grid,
   .showcase-grid,
   .proof-grid,
-  .ops-layout,
   .flow-sample-grid,
   .case-layout {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1040,8 +962,6 @@ footer {
   .process-grid,
   .showcase-grid,
   .proof-grid,
-  .ops-layout,
-  .ops-metrics,
   .flow-sample-grid,
   .case-layout,
   .case-stats {
@@ -1467,48 +1387,12 @@ footer {
       </div>
     </div>
   </section>
-
-  <section id="ops" class="ops-band internal-entry">
-    <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">INTERNAL SYSTEM</p>
-          <h2>内部系统入口。</h2>
-        </div>
-        <p>这里放车管系统和物流系统入口，供内部人员登录查看车辆、订单、流水和调度信息。官网访客看业务介绍即可，系统明细只在授权后台查看。</p>
-      </div>
-      <div class="ops-layout">
-        <div class="ops-panel">
-          <h3>车管系统</h3>
-          <p>用于内部管理车辆资产、司机合作、合同、GPS状态和运营跟进。公网官网只放入口，不展示后台数据。</p>
-          <div class="ops-metrics">
-            <span><strong>车辆</strong><small>资产、车况、合同</small></span>
-            <span><strong>司机</strong><small>合作、培训、交付</small></span>
-            <span><strong>定位</strong><small>GPS在线和轨迹</small></span>
-            <span><strong>跟进</strong><small>维修、违章、回访</small></span>
-          </div>
-          <div class="focus-actions">
-            <a class="button primary" href="/wuliu.html">进入内部入口</a>
-            <a class="button secondary" href="tel:13086677171">联系管理员</a>
-          </div>
-        </div>
-        <div class="ops-screen" aria-label="内部系统入口预览">
-          <div class="ops-screen-head"><span>新满运达 / 物流系统</span><span>内部使用</span></div>
-          <div class="ops-screen-grid">
-            <div class="ops-screen-row"><span>物流系统</span><strong>订单、派单、回款</strong></div>
-            <div class="ops-screen-row"><span>车管系统</span><strong>车辆、司机、合同</strong></div>
-            <div class="ops-screen-row"><span>运营看板</span><strong>流水、报销、风险</strong></div>
-            <div class="ops-screen-row"><span>数据权限</span><strong>授权后台查看明细</strong></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 </main>
 
 <footer>
   <div class="container footer-inner">
     <span>成都新三程 - 新能源4.2米货车租赁、以租代购、车辆销售、司机配车</span>
+    <a class="footer-link" href="/wuliu.html">员工入口</a>
     <span>© 2026 成都新三程</span>
   </div>
 </footer>
