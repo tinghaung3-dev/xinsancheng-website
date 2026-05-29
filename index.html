@@ -316,6 +316,25 @@ img { max-width: 100%; display: block; }
   color: #cad5df;
   font-size: 13px;
 }
+.hero-trust {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  max-width: 920px;
+  margin-top: 22px;
+}
+.hero-trust span {
+  min-height: 46px;
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  color: #edf7f5;
+  background: rgba(255, 255, 255, .08);
+  border: 1px solid rgba(255, 255, 255, .16);
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 800;
+}
 
 section { padding: 78px 0; }
 .section-head {
@@ -377,12 +396,7 @@ section { padding: 78px 0; }
 }
 
 .fleet-band { background: var(--panel); }
-.fleet-layout {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 36px;
-  align-items: stretch;
-}
+.fleet-layout { display: grid; gap: 28px; }
 .fleet-panel {
   padding: 34px;
   background: var(--white);
@@ -418,11 +432,12 @@ section { padding: 78px 0; }
 }
 .vehicle-plan-grid {
   display: grid;
-  gap: 16px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
 }
 .vehicle-plan-card {
   display: grid;
-  grid-template-columns: minmax(210px, .72fr) 1fr;
+  grid-template-rows: 220px 1fr;
   overflow: hidden;
   background: var(--white);
   border: 1px solid var(--line);
@@ -443,13 +458,12 @@ section { padding: 78px 0; }
 }
 .vehicle-plan-body {
   display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 10px 18px;
-  padding: 16px;
+  gap: 12px;
+  padding: 20px;
 }
 .vehicle-plan-body h3 {
   margin: 0 0 4px;
-  font-size: 18px;
+  font-size: 22px;
 }
 .vehicle-plan-body p {
   margin: 0;
@@ -457,12 +471,13 @@ section { padding: 78px 0; }
   font-size: 13px;
 }
 .vehicle-plan-price {
-  color: var(--brand-dark);
+  color: #f97316;
+  font-size: clamp(30px, 3vw, 42px);
+  line-height: 1;
   font-weight: 800;
   white-space: nowrap;
 }
 .vehicle-plan-scene {
-  grid-column: 1 / -1;
   padding-top: 10px;
   border-top: 1px solid var(--line);
   color: #344054;
@@ -905,6 +920,7 @@ footer {
   color: var(--brand-dark);
   font-weight: 800;
 }
+.mobile-call-bar { display: none; }
 
 @media (max-width: 980px) {
   .nav { display: none; }
@@ -917,7 +933,9 @@ footer {
       url("assets/hero-fleet.jpg") 96% 64% / 460px auto no-repeat;
   }
   .hero-strip,
+  .hero-trust,
   .service-grid,
+  .vehicle-plan-grid,
   .process-grid,
   .showcase-grid,
   .proof-grid,
@@ -958,7 +976,9 @@ footer {
   .hero-actions { flex-direction: column; }
   .button { width: 100%; }
   .hero-strip,
+  .hero-trust,
   .service-grid,
+  .vehicle-plan-grid,
   .process-grid,
   .showcase-grid,
   .proof-grid,
@@ -990,13 +1010,37 @@ footer {
   }
   .vehicle-plan-body h3 { font-size: 16px; }
   .vehicle-plan-price {
-    grid-column: 1 / -1;
-    font-size: 14px;
+    font-size: 32px;
   }
   .vehicle-plan-scene {
     padding-top: 8px;
     font-size: 13px;
   }
+  body { padding-bottom: 76px; }
+  .mobile-call-bar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 90;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
+    background: rgba(255, 255, 255, .96);
+    border-top: 1px solid var(--line);
+    box-shadow: 0 -14px 32px rgba(16, 24, 40, .12);
+  }
+  .mobile-call-bar a {
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    font-weight: 900;
+  }
+  .mobile-call-bar .call-now { color: #fff; background: #f97316; }
+  .mobile-call-bar .view-plan { color: var(--brand-dark); background: #eef4f3; }
 }
 </style>
 </head>
@@ -1009,8 +1053,8 @@ footer {
       <span class="brand-tagline">新能源货车资产与运营服务</span>
     </a>
     <nav class="nav" aria-label="主导航">
-      <a href="#services">业务服务</a>
       <a href="#fleet">车型方案</a>
+      <a href="#services">业务服务</a>
       <a href="#sales">新车销售</a>
       <a href="#drivers">司机合作</a>
       <a href="#process">合作流程</a>
@@ -1023,17 +1067,74 @@ footer {
   <section class="hero">
     <div class="hero-inner">
       <p class="eyebrow">成都本地新能源商用车服务商</p>
-      <h1>新能源货车租赁、配车与车队运营，一站式落地。</h1>
-      <p class="hero-text">面向成都及川渝地区，为司机、车队和企业客户提供4.2米新能源货车租赁、以租代购、车辆处置、司机配车和售后管理。方案清楚，合同清楚，交付清楚。</p>
+      <h1>成都4.2米新能源货车租赁，月租6300元起。</h1>
+      <p class="hero-text">车在仓库，合同在桌上，价格提前说清楚。支持租赁、以租代购、新车销售、二手车买卖和司机配车。</p>
       <div class="hero-actions">
-        <a class="button primary" href="tel:13086677171">电话咨询车辆方案</a>
-        <a class="button secondary" href="#fleet">查看车型与租金</a>
+        <a class="button primary" href="tel:13086677171">拨打 13086677171</a>
+        <a class="button secondary" href="#fleet">查看租赁方案</a>
       </div>
       <div class="hero-strip" aria-label="运营概况">
-        <div class="hero-stat"><strong>4.2米</strong><span>新能源仓栅式为主</span></div>
-        <div class="hero-stat"><strong>120-140度</strong><span>覆盖同城和城际路线</span></div>
-        <div class="hero-stat"><strong>12-36期</strong><span>租赁与以租代购方案</span></div>
-        <div class="hero-stat"><strong>川渝</strong><span>成都本地交付和服务</span></div>
+        <div class="hero-stat"><strong>¥6,300</strong><span>120度车型月租起</span></div>
+        <div class="hero-stat"><strong>¥6,500</strong><span>132度车型月租起</span></div>
+        <div class="hero-stat"><strong>¥6,800</strong><span>140度车型月租起</span></div>
+        <div class="hero-stat"><strong>现车</strong><span>成都本地看车交付</span></div>
+      </div>
+      <div class="hero-trust" aria-label="首屏信任点">
+        <span>真实现车，可现场看车</span>
+        <span>120 / 132 / 140度明码报价</span>
+        <span>合同条款签前看清</span>
+        <span>交付、保险、售后有人管</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="fleet" class="fleet-band">
+    <div class="container fleet-layout">
+      <div class="fleet-panel">
+        <p class="section-kicker">FLEET PLAN</p>
+        <h2>三档车型明码报价，先看价格再看车。</h2>
+        <p>120度、132度、140度仓栅式4.2米新能源货车，租金、押金、租期和交车时间提前讲清楚。先按线路预算选车型，再到仓库看实车。</p>
+        <div class="feature-list">
+          <div class="feature-item"><span class="check">✓</span><span>真实现车在仓库，客户可到店看车、看车厢、看驾驶室。</span></div>
+          <div class="feature-item"><span class="check">✓</span><span>费用提前讲清，合同签前看清，不靠低价话术吸引客户。</span></div>
+          <div class="feature-item"><span class="check">✓</span><span>交付、保险、售后、年审、维修问题都有本地团队对接。</span></div>
+        </div>
+      </div>
+      <div class="vehicle-plan-grid">
+        <article class="vehicle-plan-card">
+          <img class="fit-contain" src="assets/real/refined-120-degree.jpg" alt="120度新能源仓栅式货车方案">
+          <div class="vehicle-plan-body">
+            <div>
+              <h3>120度车型</h3>
+              <p>绿色仓栅式4.2米</p>
+            </div>
+            <div class="vehicle-plan-price">¥6,300/月起</div>
+            <div class="vehicle-plan-scene">同款仓栅车，120度电池，适合预算更敏感的路线</div>
+          </div>
+        </article>
+        <article class="vehicle-plan-card">
+          <img src="assets/real/refined-132-degree.jpg" alt="132度新能源仓栅式货车外观">
+          <div class="vehicle-plan-body">
+            <div>
+              <h3>132度车型</h3>
+              <p>白色仓栅式4.2米</p>
+            </div>
+            <div class="vehicle-plan-price">¥6,500/月起</div>
+            <div class="vehicle-plan-scene">同款仓栅车，132度电池，续航和成本更均衡</div>
+          </div>
+        </article>
+        <article class="vehicle-plan-card">
+          <img class="fit-contain" src="assets/real/gpt-140-degree.jpg" alt="140度新能源仓栅式货车方案">
+          <div class="vehicle-plan-body">
+            <div>
+              <h3>140度车型</h3>
+              <p>绿色仓栅式4.2米</p>
+            </div>
+            <div class="vehicle-plan-price">¥6,800/月起</div>
+            <div class="vehicle-plan-scene">同款仓栅车，140度电池，续航余量更充足</div>
+          </div>
+        </article>
+        <div class="vehicle-note">二手车处置：退役车辆整备出售，一车一价，适合预算敏感和固定货源客户。</div>
       </div>
     </div>
   </section>
@@ -1072,57 +1173,6 @@ footer {
           <p>先把车型、费用、押金、保险、路线和结算口径讲清楚，再决定是否合作，不用虚假高薪吸引司机。</p>
           <a href="#drivers">查看司机合作</a>
         </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="fleet" class="fleet-band">
-    <div class="container fleet-layout">
-      <div class="fleet-panel">
-        <p class="section-kicker">FLEET PLAN</p>
-        <h2>不是只报一个低价，而是按真实路线配车。</h2>
-        <p>新能源货车最怕“续航、载重、路线、租金”四件事不匹配。新三程会先确认客户的日均公里、装载情况、跑同城还是城际，再推荐车型和租期。</p>
-        <div class="feature-list">
-          <div class="feature-item"><span class="check">✓</span><span>成都本地看车、签约、交付，车辆情况当面确认。</span></div>
-          <div class="feature-item"><span class="check">✓</span><span>押金、租金、保险、违约责任写进合同，避免口头承诺。</span></div>
-          <div class="feature-item"><span class="check">✓</span><span>车辆交付后继续跟进使用、维修、年审和路线适配问题。</span></div>
-        </div>
-      </div>
-      <div class="vehicle-plan-grid">
-        <article class="vehicle-plan-card">
-          <img class="fit-contain" src="assets/real/refined-120-degree.jpg" alt="120度新能源仓栅式货车方案">
-          <div class="vehicle-plan-body">
-            <div>
-              <h3>120度车型</h3>
-              <p>绿色仓栅式4.2米</p>
-            </div>
-            <div class="vehicle-plan-price">¥6,300/月起</div>
-            <div class="vehicle-plan-scene">同款仓栅车，120度电池，适合预算更敏感的路线</div>
-          </div>
-        </article>
-        <article class="vehicle-plan-card">
-          <img src="assets/real/refined-132-degree.jpg" alt="132度新能源仓栅式货车外观">
-          <div class="vehicle-plan-body">
-            <div>
-              <h3>132度车型</h3>
-              <p>白色仓栅式4.2米</p>
-            </div>
-            <div class="vehicle-plan-price">¥6,500/月起</div>
-            <div class="vehicle-plan-scene">同款仓栅车，132度电池，续航和成本更均衡</div>
-          </div>
-        </article>
-        <article class="vehicle-plan-card">
-          <img class="fit-contain" src="assets/real/gpt-140-degree.jpg" alt="140度新能源仓栅式货车方案">
-          <div class="vehicle-plan-body">
-            <div>
-              <h3>140度车型</h3>
-              <p>绿色仓栅式4.2米</p>
-            </div>
-            <div class="vehicle-plan-price">¥6,800/月起</div>
-            <div class="vehicle-plan-scene">同款仓栅车，140度电池，续航余量更充足</div>
-          </div>
-        </article>
-        <div class="vehicle-note">二手车处置：退役车辆整备出售，一车一价，适合预算敏感和固定货源客户。</div>
       </div>
     </div>
   </section>
@@ -1396,6 +1446,10 @@ footer {
     <span>© 2026 成都新三程</span>
   </div>
 </footer>
+<div class="mobile-call-bar" aria-label="移动端快捷咨询">
+  <a class="call-now" href="tel:13086677171">电话咨询</a>
+  <a class="view-plan" href="#fleet">看租赁方案</a>
+</div>
 <div class="image-lightbox" id="imageLightbox" aria-hidden="true">
   <button class="lightbox-close" type="button" aria-label="关闭图片">×</button>
   <button class="lightbox-nav lightbox-prev" type="button" aria-label="上一张">‹</button>
