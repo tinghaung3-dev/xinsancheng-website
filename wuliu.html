@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>新满运达物流运营看板 - 成都新三程</title>
-<meta name="description" content="成都新三程展示新满运达物流运营系统能力，覆盖干线订单、司机流水、车辆位置、报销和未付款追踪。">
-<meta name="keywords" content="新满运达,物流运营看板,成都货车运营,司机流水,干线物流调度">
+<title>内部系统入口 - 成都新三程</title>
+<meta name="description" content="成都新三程内部系统入口，跳转车管系统和物流系统。">
+<meta name="robots" content="noindex,nofollow">
 <link rel="canonical" href="https://xinsancheng.cn/wuliu.html">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
@@ -27,54 +27,42 @@
 <main>
   <section class="hero">
     <div class="container hero-inner">
-      <p class="eyebrow">Logistics Operations</p>
-      <h1>新满运达物流运营看板，接入车辆、司机、订单和流水。</h1>
-      <p>这不是单纯展示后台截图，而是把干线订单、司机流水、报销、未付款、车辆位置和调度状态放进统一运营体系，服务司机合作和车队管理。</p>
-      <div class="actions"><a class="button primary" href="#system">打开嵌入系统</a><a class="button secondary" href="tel:13086677171">咨询运营合作</a></div>
-      <div class="metric-grid" aria-label="物流运营数据口径">
-        <div class="metric"><strong>订单</strong><span>干线订单、派单、完成状态</span></div>
-        <div class="metric"><strong>流水</strong><span>流水、已支付、未付款分开看</span></div>
-        <div class="metric"><strong>司机</strong><span>司机流水、报销和车辆绑定</span></div>
-        <div class="metric"><strong>位置</strong><span>司机位置和车辆在线状态</span></div>
-      </div>
+      <p class="eyebrow">Internal Portal</p>
+      <h1>内部系统入口。</h1>
+      <p>这个页面只作为新三程内部人员进入车管系统和物流系统的入口，不作为对外客户宣传页面。车辆、司机、订单、流水等明细均在授权后台查看。</p>
+      <div class="actions"><a class="button primary" href="#systems">进入系统入口</a><a class="button secondary" href="/">返回官网首页</a></div>
     </div>
   </section>
 
-  <section>
+  <section id="systems">
     <div class="container">
-      <div class="section-head"><div><p class="section-kicker">WHY IT MATTERS</p><h2>车队运营不能只看车，还要看货、司机和钱。</h2></div><p>新满运达数据作为物流事实源，帮助区分流水、报销、未付款和业务留存，避免把口头说法当成最终账。</p></div>
+      <div class="section-head"><div><p class="section-kicker">SYSTEM ENTRANCE</p><h2>车管系统和物流系统分开进入。</h2></div><p>官网只放入口，不保存账号密码，也不公开订单、司机位置、流水和合同明细。</p></div>
       <div class="grid-3">
-        <article class="card"><strong>订单调度</strong><p>每日司机订单、干线订单和派单状态可追踪，司机合作不只停留在口头承诺。</p></article>
-        <article class="card"><strong>流水结算</strong><p>流水金额、报销金额、支付金额、未付款分别管理，公司留存和净利润不混淆。</p></article>
-        <article class="card"><strong>车辆位置</strong><p>司机位置、车辆在线状态和车牌绑定可辅助调度、风控和收车判断。</p></article>
+        <article class="card">
+          <strong>车管系统</strong>
+          <p>管理车辆资产、司机合作、合同、GPS、交付、售后和运营跟进。</p>
+          <p class="notice">当前为本机/内网入口，外部访客无法直接访问。</p>
+          <div class="actions"><a class="button primary" href="http://127.0.0.1:3020/" target="_blank" rel="noreferrer">打开车管系统</a></div>
+        </article>
+        <article class="card">
+          <strong>物流系统</strong>
+          <p>进入新满运达物流后台，查看订单、派单、报销、司机流水和回款状态。</p>
+          <p class="notice">如嵌入窗口无法登录，使用新窗口打开。</p>
+          <div class="actions"><a class="button primary" href="https://saas.junxiaoyao.com/#/" target="_blank" rel="noreferrer">打开物流系统</a></div>
+        </article>
+        <article class="card">
+          <strong>运营看板</strong>
+          <p>把车管和物流数据统一汇总后，用于内部经营分析和异常提醒。</p>
+          <p class="notice">建议后续部署到受密码保护的内部子域名。</p>
+          <div class="actions"><a class="button primary" href="http://127.0.0.1:3020/logistics" target="_blank" rel="noreferrer">打开运营看板</a></div>
+        </article>
       </div>
     </div>
   </section>
 
-  <section class="panel">
-    <div class="container split">
-      <div class="dark-card">
-        <p class="section-kicker">BUSINESS CALIBER</p>
-        <h2>官网展示能力，敏感明细留在授权后台。</h2>
-        <p>后台里有订单、司机手机号、位置和结算数据，不适合直接公开。官网只展示运营能力和登录入口，实际业务核算仍以系统导出和公司确认数据为准。</p>
-        <div class="flow-list">
-          <div><span>业务规模</span><b>看订单与流水</b></div>
-          <div><span>司机结算</span><b>看报销金额</b></div>
-          <div><span>回款风险</span><b>看未付款流水</b></div>
-          <div><span>经营留存</span><b>流水 - 报销</b></div>
-        </div>
-      </div>
-      <div class="card">
-        <strong>当前接入模块</strong>
-        <p>已识别 junxiaoyao 系统中的干线物流、报销、司机位置、每日司机订单、流水查看、员工业绩、司机流水、干线订单、车辆列表和车辆开销模块。</p>
-        <p class="notice">如果需要把这套 OPS 看板做成公网后台，建议单独部署到受密码保护的子域名，例如 ops.xinsancheng.cn，而不是把账号写进官网前端。</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="system">
+  <section id="system" class="panel">
     <div class="container">
-      <div class="section-head"><div><p class="section-kicker">EMBEDDED SYSTEM</p><h2>新满运达物流系统入口。</h2></div><p>下方嵌入第三方 SaaS 登录入口。若浏览器限制嵌入，可以点击右上角按钮新窗口打开。</p></div>
+      <div class="section-head"><div><p class="section-kicker">LOGISTICS LOGIN</p><h2>物流系统嵌入入口。</h2></div><p>这里保留一个登录窗口，方便内部人员从官网底部入口快速跳转。真实数据仍以授权后台为准。</p></div>
       <div class="embed-box">
         <div class="embed-head"><strong>junxiaoyao 物流系统</strong><span><a href="https://saas.junxiaoyao.com/#/" target="_blank" rel="noreferrer">新窗口打开</a></span></div>
         <iframe src="https://saas.junxiaoyao.com/#/" title="新满运达物流系统"></iframe>
@@ -82,8 +70,6 @@
       <p class="notice">注意：官网不会保存或展示后台账号密码。后台登录、订单明细、司机位置和流水明细均由授权系统处理。</p>
     </div>
   </section>
-
-  <section class="contact"><div class="container contact-box"><div><p class="section-kicker">Contact</p><h2>想了解车辆、司机和物流运营合作，先电话沟通。</h2><p>电话：13086677171。成都本地车辆交付、司机配车和运营跟进。</p></div><a class="button primary" href="tel:13086677171">电话咨询</a></div></section>
 </main>
 <footer><div class="container footer-inner"><span>成都新三程 - 新能源货车资产与物流运营服务</span><span>13086677171</span></div></footer>
 <script src="assets/chat-widget.js" defer></script>
