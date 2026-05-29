@@ -125,7 +125,7 @@
 <style>
 :root {
   --ink: #162033;
-  --muted: #5c6678;
+  --muted: #475467;
   --line: #dfe5ee;
   --panel: #f6f8fb;
   --panel-strong: #edf2f7;
@@ -905,7 +905,7 @@ section { padding: 78px 0; }
 
 footer {
   padding: 28px 0;
-  color: #667085;
+  color: #475467;
   background: #f8fafc;
   border-top: 1px solid var(--line);
   font-size: 14px;
@@ -964,17 +964,22 @@ footer {
   .brand-tagline { display: none; }
   .phone-link { display: none; }
   .hero {
-    min-height: 720px;
+    min-height: auto;
+    align-items: flex-start;
   }
   .hero::before {
     background:
       linear-gradient(180deg, rgba(12, 24, 39, 1) 0%, rgba(12, 24, 39, .92) 56%, rgba(12, 24, 39, .76) 100%),
       url("assets/hero-fleet.jpg") 78% 86% / 320px auto no-repeat;
   }
-  .hero-inner { padding: 86px 0 32px; }
-  .hero-text { font-size: 16px; }
+  .hero-inner { padding: 44px 0 30px; }
+  .hero h1 { font-size: 34px; line-height: 1.12; }
+  .hero-text { margin-top: 16px; font-size: 16px; }
   .hero-actions { flex-direction: column; }
-  .button { width: 100%; }
+  .button { width: 100%; min-height: 54px; font-size: 16px; }
+  .hero-strip { margin-top: 24px; }
+  .hero-stat { min-height: 76px; padding: 14px; }
+  .hero-trust { display: none; }
   .hero-strip,
   .hero-trust,
   .service-grid,
@@ -1049,7 +1054,7 @@ footer {
 <header class="site-header">
   <div class="container header-inner">
     <a class="brand" href="/">
-      <span class="brand-logo-wrap"><img class="brand-logo" src="assets/brand/xinsancheng-logo-full.png" alt="成都新三程汽车销售"></span>
+      <span class="brand-logo-wrap"><img class="brand-logo" src="assets/brand/xinsancheng-logo-full.png" width="2124" height="360" loading="eager" decoding="async" fetchpriority="high" alt="成都新三程汽车销售"></span>
       <span class="brand-tagline">新能源货车资产与运营服务</span>
     </a>
     <nav class="nav" aria-label="主导航">
@@ -1102,7 +1107,7 @@ footer {
       </div>
       <div class="vehicle-plan-grid">
         <article class="vehicle-plan-card">
-          <img class="fit-contain" src="assets/real/refined-120-degree.jpg" alt="120度新能源仓栅式货车方案">
+          <img class="fit-contain" src="assets/real/refined-120-degree.jpg" width="1535" height="864" loading="lazy" decoding="async" alt="120度新能源仓栅式货车方案">
           <div class="vehicle-plan-body">
             <div>
               <h3>120度车型</h3>
@@ -1113,7 +1118,7 @@ footer {
           </div>
         </article>
         <article class="vehicle-plan-card">
-          <img src="assets/real/refined-132-degree.jpg" alt="132度新能源仓栅式货车外观">
+          <img src="assets/real/refined-132-degree.jpg" width="1535" height="864" loading="lazy" decoding="async" alt="132度新能源仓栅式货车外观">
           <div class="vehicle-plan-body">
             <div>
               <h3>132度车型</h3>
@@ -1124,7 +1129,7 @@ footer {
           </div>
         </article>
         <article class="vehicle-plan-card">
-          <img class="fit-contain" src="assets/real/gpt-140-degree.jpg" alt="140度新能源仓栅式货车方案">
+          <img class="fit-contain" src="assets/real/gpt-140-degree.jpg" width="1536" height="1024" loading="lazy" decoding="async" alt="140度新能源仓栅式货车方案">
           <div class="vehicle-plan-body">
             <div>
               <h3>140度车型</h3>
@@ -1181,7 +1186,7 @@ footer {
     <div class="container focus-grid">
       <article id="sales" class="focus-item">
         <div class="focus-media">
-          <img src="assets/real/sales-refined-main.jpg" alt="新能源货车新车销售精修展示">
+          <img src="assets/real/sales-refined-main.jpg" width="1600" height="900" loading="lazy" decoding="async" alt="新能源货车新车销售精修展示">
         </div>
         <div class="focus-copy">
           <p class="section-kicker">NEW & USED SALES</p>
@@ -1202,7 +1207,7 @@ footer {
 
       <article id="drivers" class="focus-item">
         <div class="focus-media">
-          <img src="assets/real/driver-training-signing-landscape.jpg" data-full="assets/real/driver-training-signing-upright.jpg" alt="成都新三程司机培训和资料确认现场">
+          <img src="assets/real/driver-training-signing-landscape.jpg" data-full="assets/real/driver-training-signing-upright.jpg" width="1199" height="774" loading="lazy" decoding="async" alt="成都新三程司机培训和资料确认现场">
         </div>
         <div class="focus-copy">
           <p class="section-kicker">DRIVER PARTNER</p>
@@ -1212,7 +1217,7 @@ footer {
             <span>陕西西安</span><span>湖南长沙</span><span>重庆</span><span>贵州贵阳</span><span>云南昆明</span><span>广西南宁</span><span>四川成都</span>
           </div>
           <div class="revenue-card-inline">
-            <img src="assets/real/driver-flow-proof.jpg" data-full="assets/real/driver-flow-detail.jpg" alt="司机合作后台流水隐私处理展示">
+            <img src="assets/real/driver-flow-proof.jpg" data-full="assets/real/driver-flow-detail.jpg" width="1600" height="900" loading="lazy" decoding="async" alt="司机合作后台流水隐私处理展示">
           </div>
           <div class="focus-points">
             <span>01 到公司面试</span>
@@ -1253,11 +1258,11 @@ footer {
           </div>
           <div class="case-proof-grid">
             <figure class="case-proof">
-              <img src="assets/real/driver-zhu-total-preview.jpg" data-full="assets/real/driver-zhu-total-detail.jpg" alt="朱师傅月度总流水26900后台总览">
+              <img src="assets/real/driver-zhu-total-preview.jpg" data-full="assets/real/driver-zhu-total-detail.jpg" width="1600" height="120" loading="lazy" decoding="async" alt="朱师傅月度总流水26900后台总览">
               <figcaption>总流水总览：26900元</figcaption>
             </figure>
             <figure class="case-proof tall">
-              <img src="assets/real/driver-zhu-orders-preview.jpg" data-full="assets/real/driver-zhu-orders-detail.jpg" alt="朱师傅日常跑车订单明细">
+              <img src="assets/real/driver-zhu-orders-preview.jpg" data-full="assets/real/driver-zhu-orders-detail.jpg" width="1600" height="578" loading="lazy" decoding="async" alt="朱师傅日常跑车订单明细">
               <figcaption>日常订单明细：每天跑什么、金额多少，一眼能看</figcaption>
             </figure>
           </div>
@@ -1276,11 +1281,11 @@ footer {
           </div>
           <div class="case-proof-grid">
             <figure class="case-proof">
-              <img src="assets/real/driver-he-total-preview.jpg" data-full="assets/real/driver-he-total-detail.jpg" alt="何师傅月度总流水25537后台总览">
+              <img src="assets/real/driver-he-total-preview.jpg" data-full="assets/real/driver-he-total-detail.jpg" width="1600" height="150" loading="lazy" decoding="async" alt="何师傅月度总流水25537后台总览">
               <figcaption>总流水总览：25537元</figcaption>
             </figure>
             <figure class="case-proof tall">
-              <img src="assets/real/driver-he-orders-preview.jpg" data-full="assets/real/driver-he-orders-detail.jpg" alt="何师傅日常跑车订单明细">
+              <img src="assets/real/driver-he-orders-preview.jpg" data-full="assets/real/driver-he-orders-detail.jpg" width="1600" height="578" loading="lazy" decoding="async" alt="何师傅日常跑车订单明细">
               <figcaption>日常订单明细：金额、状态、时间清楚展示</figcaption>
             </figure>
           </div>
@@ -1300,43 +1305,43 @@ footer {
       </div>
       <div class="flow-sample-grid">
         <figure class="flow-sample-card">
-          <img src="assets/real/flow-detail-01-preview.jpg" data-full="assets/real/flow-detail-01-detail.jpg" alt="订单流水明细样本01">
+          <img src="assets/real/flow-detail-01-preview.jpg" data-full="assets/real/flow-detail-01-detail.jpg" width="1600" height="820" loading="lazy" decoding="async" alt="订单流水明细样本01">
           <figcaption><strong>订单明细 01</strong><span>金额、报销、支付状态一屏看清。</span></figcaption>
         </figure>
         <figure class="flow-sample-card">
-          <img src="assets/real/flow-detail-02-preview.jpg" data-full="assets/real/flow-detail-02-detail.jpg" alt="订单流水明细样本02">
+          <img src="assets/real/flow-detail-02-preview.jpg" data-full="assets/real/flow-detail-02-detail.jpg" width="1600" height="820" loading="lazy" decoding="async" alt="订单流水明细样本02">
           <figcaption><strong>订单明细 02</strong><span>多笔记录连续展示，不靠口头承诺。</span></figcaption>
         </figure>
         <figure class="flow-sample-card">
-          <img src="assets/real/flow-detail-03-preview.jpg" data-full="assets/real/flow-detail-03-detail.jpg" alt="订单流水明细样本03">
+          <img src="assets/real/flow-detail-03-preview.jpg" data-full="assets/real/flow-detail-03-detail.jpg" width="1600" height="820" loading="lazy" decoding="async" alt="订单流水明细样本03">
           <figcaption><strong>订单明细 03</strong><span>后台记录直接看，合作前心里有数。</span></figcaption>
         </figure>
         <figure class="flow-sample-card">
-          <img src="assets/real/flow-detail-04-preview.jpg" data-full="assets/real/flow-detail-04-detail.jpg" alt="订单流水明细样本04">
+          <img src="assets/real/flow-detail-04-preview.jpg" data-full="assets/real/flow-detail-04-detail.jpg" width="1600" height="820" loading="lazy" decoding="async" alt="订单流水明细样本04">
           <figcaption><strong>订单明细 04</strong><span>金额和状态清楚，重点信息不含糊。</span></figcaption>
         </figure>
         <figure class="flow-sample-card">
-          <img src="assets/real/flow-detail-05-preview.jpg" data-full="assets/real/flow-detail-05-detail.jpg" alt="订单流水明细样本05">
+          <img src="assets/real/flow-detail-05-preview.jpg" data-full="assets/real/flow-detail-05-detail.jpg" width="1600" height="820" loading="lazy" decoding="async" alt="订单流水明细样本05">
           <figcaption><strong>订单明细 05</strong><span>四月部分订单，流水不是空口说。</span></figcaption>
         </figure>
         <figure class="flow-sample-card">
-          <img src="assets/real/flow-detail-06-preview.jpg" data-full="assets/real/flow-detail-06-detail.jpg" alt="订单流水明细样本06">
+          <img src="assets/real/flow-detail-06-preview.jpg" data-full="assets/real/flow-detail-06-detail.jpg" width="1600" height="820" loading="lazy" decoding="async" alt="订单流水明细样本06">
           <figcaption><strong>订单明细 06</strong><span>日常跑车记录，按单查看更踏实。</span></figcaption>
         </figure>
         <figure class="flow-sample-card">
-          <img src="assets/real/flow-detail-07-preview.jpg" data-full="assets/real/flow-detail-07-detail.jpg" alt="订单流水明细样本07">
+          <img src="assets/real/flow-detail-07-preview.jpg" data-full="assets/real/flow-detail-07-detail.jpg" width="1600" height="820" loading="lazy" decoding="async" alt="订单流水明细样本07">
           <figcaption><strong>订单明细 07</strong><span>不同批次订单，跑车记录有迹可查。</span></figcaption>
         </figure>
         <figure class="flow-sample-card">
-          <img src="assets/real/flow-detail-08-preview.jpg" data-full="assets/real/flow-detail-08-detail.jpg" alt="订单流水明细样本08">
+          <img src="assets/real/flow-detail-08-preview.jpg" data-full="assets/real/flow-detail-08-detail.jpg" width="1600" height="820" loading="lazy" decoding="async" alt="订单流水明细样本08">
           <figcaption><strong>订单明细 08</strong><span>单笔金额、报销和支付状态分开看。</span></figcaption>
         </figure>
         <figure class="flow-sample-card">
-          <img src="assets/real/flow-detail-09-preview.jpg" data-full="assets/real/flow-detail-09-detail.jpg" alt="订单流水明细样本09">
+          <img src="assets/real/flow-detail-09-preview.jpg" data-full="assets/real/flow-detail-09-detail.jpg" width="1600" height="820" loading="lazy" decoding="async" alt="订单流水明细样本09">
           <figcaption><strong>订单明细 09</strong><span>关键字段保留，合作判断更直接。</span></figcaption>
         </figure>
         <figure class="flow-sample-card">
-          <img src="assets/real/flow-detail-10-preview.jpg" data-full="assets/real/flow-detail-10-detail.jpg" alt="订单流水明细样本10">
+          <img src="assets/real/flow-detail-10-preview.jpg" data-full="assets/real/flow-detail-10-detail.jpg" width="1600" height="820" loading="lazy" decoding="async" alt="订单流水明细样本10">
           <figcaption><strong>订单明细 10</strong><span>更多记录到店看，数据对上再决定。</span></figcaption>
         </figure>
       </div>
@@ -1355,19 +1360,19 @@ footer {
       </div>
       <div class="showcase-grid">
         <figure class="showcase-card" data-gallery-key="yard">
-          <img src="assets/real/gallery-yard-02.jpg" data-gallery-key="yard" alt="成都新三程新能源货车场地风采">
+          <img src="assets/real/gallery-yard-02.jpg" data-gallery-key="yard" width="1800" height="1200" loading="lazy" decoding="async" alt="成都新三程新能源货车场地风采">
           <figcaption><strong>场地风貌</strong><span>新车、二手车和待交付车辆集中展示，到店可实地对比。</span><span class="gallery-badge">点击查看 5 张</span></figcaption>
         </figure>
         <figure class="showcase-card" data-gallery-key="loading">
-          <img src="assets/real/gallery-loading-01.jpg" data-gallery-key="loading" alt="新能源货车装车发运现场">
+          <img src="assets/real/gallery-loading-01.jpg" data-gallery-key="loading" width="1800" height="1200" loading="lazy" decoding="async" alt="新能源货车装车发运现场">
           <figcaption><strong>装车现场</strong><span>仓栅车批量配货实拍，建材、零担和城际运输都能参考。</span><span class="gallery-badge">点击查看 6 张</span></figcaption>
         </figure>
         <figure class="showcase-card" data-gallery-key="newcar">
-          <img src="assets/real/gallery-newcar-01.jpg" data-gallery-key="newcar" alt="新能源仓栅式货车新车风采">
+          <img src="assets/real/gallery-newcar-01.jpg" data-gallery-key="newcar" width="1800" height="1200" loading="lazy" decoding="async" alt="新能源仓栅式货车新车风采">
           <figcaption><strong>全新车况</strong><span>4.2米仓栅式新车外观、车厢和配置实拍，品质一目了然。</span><span class="gallery-badge">点击查看 6 张</span></figcaption>
         </figure>
         <figure class="showcase-card" data-gallery-key="usedcar">
-          <img src="assets/real/gallery-usedcar-01.jpg" data-gallery-key="usedcar" alt="二手新能源仓栅式货车实车风采">
+          <img src="assets/real/gallery-usedcar-01.jpg" data-gallery-key="usedcar" width="1800" height="1200" loading="lazy" decoding="async" alt="二手新能源仓栅式货车实车风采">
           <figcaption><strong>二手车实况</strong><span>每辆车真实状态逐车看，外观、车厢和驾驶室透明展示。</span><span class="gallery-badge">点击查看 5 张</span></figcaption>
         </figure>
       </div>
@@ -1450,10 +1455,10 @@ footer {
   <a class="call-now" href="tel:13086677171">电话咨询</a>
   <a class="view-plan" href="#fleet">看租赁方案</a>
 </div>
-<div class="image-lightbox" id="imageLightbox" aria-hidden="true">
+<div class="image-lightbox" id="imageLightbox" hidden inert>
   <button class="lightbox-close" type="button" aria-label="关闭图片">×</button>
   <button class="lightbox-nav lightbox-prev" type="button" aria-label="上一张">‹</button>
-  <img src="" alt="">
+  <img alt="" width="1600" height="900" loading="eager" decoding="async">
   <button class="lightbox-nav lightbox-next" type="button" aria-label="下一张">›</button>
   <div class="lightbox-caption"></div>
   <div class="lightbox-thumbs" aria-label="相册缩略图"></div>
@@ -1512,9 +1517,23 @@ function renderLightbox() {
   nextButton.style.display = isGallery ? 'block' : 'none';
   lightboxThumbs.classList.toggle('is-visible', isGallery);
   if (isGallery) {
-    lightboxThumbs.innerHTML = currentGallery.map((galleryItem, index) => (
-      `<button type="button" class="${index === currentIndex ? 'is-active' : ''}" data-index="${index}" aria-label="查看第${index + 1}张"><img src="${galleryItem.src}" alt=""></button>`
-    )).join('');
+    lightboxThumbs.innerHTML = '';
+    currentGallery.forEach((galleryItem, index) => {
+      const button = document.createElement('button');
+      const thumb = document.createElement('img');
+      button.type = 'button';
+      button.dataset.index = String(index);
+      button.setAttribute('aria-label', `查看第${index + 1}张`);
+      button.classList.toggle('is-active', index === currentIndex);
+      thumb.src = galleryItem.src;
+      thumb.width = 120;
+      thumb.height = 80;
+      thumb.loading = 'lazy';
+      thumb.decoding = 'async';
+      thumb.alt = '';
+      button.appendChild(thumb);
+      lightboxThumbs.appendChild(button);
+    });
   } else {
     lightboxThumbs.innerHTML = '';
   }
@@ -1524,8 +1543,9 @@ function openItems(items, startIndex = 0) {
   currentGallery = items;
   currentIndex = startIndex;
   renderLightbox();
+  lightbox.hidden = false;
   lightbox.classList.add('is-open');
-  lightbox.setAttribute('aria-hidden', 'false');
+  lightbox.removeAttribute('inert');
 }
 
 function openGallery(key) {
@@ -1554,8 +1574,9 @@ document.querySelectorAll('.showcase-card[data-gallery-key]').forEach((card) => 
 });
 function closeLightbox() {
   lightbox.classList.remove('is-open');
-  lightbox.setAttribute('aria-hidden', 'true');
-  lightboxImg.src = '';
+  lightbox.setAttribute('inert', '');
+  lightbox.hidden = true;
+  lightboxImg.removeAttribute('src');
   lightboxThumbs.innerHTML = '';
   currentGallery = [];
   currentIndex = 0;
