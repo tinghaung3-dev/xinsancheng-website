@@ -212,6 +212,24 @@ img { max-width: 100%; display: block; }
   border-radius: 6px;
   font-weight: 700;
 }
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 0 0 auto;
+}
+.employee-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 14px;
+  color: var(--brand-dark);
+  background: #eef4f3;
+  border: 1px solid rgba(15, 118, 110, .22);
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 800;
+}
 
 .hero {
   position: relative;
@@ -291,6 +309,7 @@ img { max-width: 100%; display: block; }
 }
 .button.primary { color: var(--white); background: var(--accent); }
 .button.secondary { color: var(--white); border-color: rgba(255, 255, 255, 0.55); }
+.button.employee { color: var(--brand-dark); background: #d9eeea; border-color: transparent; }
 .hero-strip {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -334,6 +353,51 @@ img { max-width: 100%; display: block; }
   border-radius: 6px;
   font-size: 13px;
   font-weight: 800;
+}
+
+.quick-entry {
+  padding: 0;
+  background: #f6f8fb;
+  border-bottom: 1px solid var(--line);
+}
+.quick-entry-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--line);
+  border-left: 1px solid var(--line);
+  border-right: 1px solid var(--line);
+}
+.quick-entry-card {
+  min-height: 164px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px;
+  background: var(--white);
+  color: var(--ink);
+  transition: transform 160ms ease, background 160ms ease;
+}
+.quick-entry-card:hover {
+  transform: translateY(-2px);
+  background: #fbfcfd;
+}
+.quick-entry-card strong {
+  display: block;
+  font-size: 21px;
+  line-height: 1.28;
+}
+.quick-entry-card span {
+  display: block;
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 14px;
+}
+.quick-entry-card em {
+  color: var(--brand-dark);
+  font-style: normal;
+  font-size: 13px;
+  font-weight: 900;
 }
 
 section { padding: 78px 0; }
@@ -938,6 +1002,7 @@ footer {
   }
   .hero-strip,
   .hero-trust,
+  .quick-entry-grid,
   .service-grid,
   .vehicle-plan-grid,
   .process-grid,
@@ -966,7 +1031,9 @@ footer {
   .brand { min-width: 0; }
   .brand-logo { width: 168px; max-height: 36px; }
   .brand-tagline { display: none; }
+  .header-actions { gap: 8px; }
   .phone-link { display: none; }
+  .employee-link { min-height: 36px; padding: 0 10px; font-size: 12px; }
   .hero {
     min-height: auto;
     align-items: flex-start;
@@ -988,6 +1055,7 @@ footer {
   .hero-trust { display: none; }
   .hero-strip,
   .hero-trust,
+  .quick-entry-grid,
   .service-grid,
   .vehicle-plan-grid,
   .process-grid,
@@ -998,6 +1066,11 @@ footer {
   .case-stats {
     grid-template-columns: 1fr;
   }
+  .quick-entry-card {
+    min-height: 118px;
+    padding: 18px;
+  }
+  .quick-entry-card strong { font-size: 18px; }
   .service-card {
     min-height: auto;
     border-right: 0;
@@ -1035,8 +1108,8 @@ footer {
     bottom: 0;
     z-index: 90;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
     padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
     background: rgba(255, 255, 255, .96);
     border-top: 1px solid var(--line);
@@ -1048,10 +1121,12 @@ footer {
     align-items: center;
     justify-content: center;
     border-radius: 6px;
+    font-size: 13px;
     font-weight: 900;
   }
   .mobile-call-bar .call-now { color: #fff; background: #f97316; }
   .mobile-call-bar .view-plan { color: var(--brand-dark); background: #eef4f3; }
+  .mobile-call-bar .staff-entry { color: var(--ink); background: #edf2f7; }
 }
 </style>
 </head>
@@ -1070,7 +1145,10 @@ footer {
       <a href="#drivers">司机合作</a>
       <a href="#process">合作流程</a>
     </nav>
-    <a class="phone-link" href="tel:13086677171">13086677171</a>
+    <div class="header-actions">
+      <a class="employee-link" href="/wuliu.html">员工入口</a>
+      <a class="phone-link" href="tel:13086677171">13086677171</a>
+    </div>
   </div>
 </header>
 
@@ -1083,6 +1161,7 @@ footer {
       <div class="hero-actions">
         <a class="button primary" href="tel:13086677171">拨打 13086677171</a>
         <a class="button secondary" href="#fleet">查看租赁方案</a>
+        <a class="button employee" href="/wuliu.html">员工入口</a>
       </div>
       <div class="hero-strip" aria-label="运营概况">
         <div class="hero-stat"><strong>¥6,300</strong><span>120度车型月租起</span></div>
@@ -1096,6 +1175,32 @@ footer {
         <span>合同条款签前看清</span>
         <span>交付、保险、售后有人管</span>
       </div>
+    </div>
+  </section>
+
+  <section class="quick-entry" aria-label="快速入口">
+    <div class="container quick-entry-grid">
+      <a class="quick-entry-card" href="#fleet">
+        <div>
+          <strong>我要租 4.2 米新能源货车</strong>
+          <span>先看 120 / 132 / 140 度车型月租和押金，再预约到店看车。</span>
+        </div>
+        <em>查看车型方案</em>
+      </a>
+      <a class="quick-entry-card" href="#drivers">
+        <div>
+          <strong>我是司机，想找车合作</strong>
+          <span>先了解合作流程、真实流水和提车培训，再决定是否到店沟通。</span>
+        </div>
+        <em>查看司机合作</em>
+      </a>
+      <a class="quick-entry-card" href="/wuliu.html">
+        <div>
+          <strong>我是员工，进入内部入口</strong>
+          <span>处理日常车辆、物流和内部协作事项，不用从业务页面往下找。</span>
+        </div>
+        <em>进入员工入口</em>
+      </a>
     </div>
   </section>
 
@@ -1460,6 +1565,7 @@ footer {
 <div class="mobile-call-bar" aria-label="移动端快捷咨询">
   <a class="call-now" href="tel:13086677171">电话咨询</a>
   <a class="view-plan" href="#fleet">看租赁方案</a>
+  <a class="staff-entry" href="/wuliu.html">员工入口</a>
 </div>
 <div class="image-lightbox" id="imageLightbox" hidden inert>
   <button class="lightbox-close" type="button" aria-label="关闭图片">×</button>
