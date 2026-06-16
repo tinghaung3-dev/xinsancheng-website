@@ -38,7 +38,7 @@
   position: absolute;
   right: 0;
   bottom: 78px;
-  width: min(360px, calc(100vw - 32px));
+  width: min(390px, calc(100vw - 32px));
   overflow: hidden;
   border: 1px solid rgba(226, 232, 240, .95);
   border-radius: 12px;
@@ -109,6 +109,92 @@
   background: #f8fafc;
 }
 
+.xsc-chat-messages {
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+  padding: 2px 2px 12px;
+  scrollbar-width: thin;
+}
+
+.xsc-chat-message {
+  max-width: 88%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  color: #223044;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  font-size: 14px;
+  line-height: 1.55;
+  white-space: pre-wrap;
+}
+
+.xsc-chat-message.is-user {
+  align-self: flex-end;
+  color: #fff;
+  background: #0f766e;
+  border-color: #0f766e;
+}
+
+.xsc-chat-message.is-assistant {
+  align-self: flex-start;
+}
+
+.xsc-chat-form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+  align-items: end;
+  padding-top: 12px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.xsc-chat-input-label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+.xsc-chat-form textarea {
+  width: 100%;
+  min-height: 46px;
+  max-height: 92px;
+  resize: vertical;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 10px 11px;
+  color: #172033;
+  background: #fff;
+  font: inherit;
+  line-height: 1.35;
+  outline: none;
+}
+
+.xsc-chat-form textarea:focus {
+  border-color: #0f766e;
+  box-shadow: 0 0 0 3px rgba(15, 118, 110, .14);
+}
+
+.xsc-chat-form button {
+  min-width: 72px;
+  height: 46px;
+  border: 0;
+  border-radius: 8px;
+  color: #fff;
+  background: #0f766e;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.xsc-chat-form button:disabled {
+  cursor: wait;
+  opacity: .72;
+}
+
 .xsc-chat-body p {
   margin: 0;
   color: #223044;
@@ -120,6 +206,7 @@
   display: grid;
   gap: 10px;
   margin-top: 14px;
+  grid-template-columns: 1fr 1fr;
 }
 
 .xsc-chat-actions a {
@@ -153,5 +240,13 @@
 
   .xsc-chat-panel {
     bottom: 70px;
+  }
+
+  .xsc-chat-messages {
+    height: min(300px, calc(100vh - 310px));
+  }
+
+  .xsc-chat-actions {
+    grid-template-columns: 1fr;
   }
 }
