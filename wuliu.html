@@ -8,21 +8,23 @@
 <link rel="canonical" href="https://xinsancheng.cn/wuliu.html">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
 <style>
-:root{--ink:#162033;--muted:#5c6678;--line:#dfe5ee;--panel:#f6f8fb;--brand:#0b4f4a;--accent:#c47a2c}
+:root{--ink:#171a20;--muted:#5c6678;--line:#dfe5ee;--panel:#f4f6f8;--brand:#0b4f4a;--accent:#1c69d4;--dark:#111827}
 *{box-sizing:border-box}
-body{min-height:100vh;margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",Arial,sans-serif;color:var(--ink);background:var(--panel);line-height:1.65}
+body{min-height:100vh;margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",Arial,sans-serif;color:var(--ink);background:linear-gradient(180deg,#fff 0%,var(--panel) 100%);line-height:1.65}
 a{color:inherit;text-decoration:none}
 .wrap{width:min(760px,calc(100% - 40px));margin:0 auto;padding:88px 0}
-.card{padding:34px;background:#fff;border:1px solid var(--line);border-radius:8px;box-shadow:0 18px 42px rgba(22,32,51,.1)}
+.card{padding:38px;background:#fff;border:1px solid var(--line);border-radius:4px;box-shadow:0 22px 60px rgba(17,24,39,.1)}
 .logo{width:min(288px,70vw);height:auto;margin-bottom:28px}
 h1{margin:0 0 12px;font-size:clamp(30px,5vw,46px);line-height:1.14}
 p{margin:0;color:var(--muted)}
-.actions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:26px}
-.button{min-height:46px;display:inline-flex;align-items:center;justify-content:center;padding:0 20px;border-radius:6px;font-weight:900}
+.actions{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:12px;margin-top:26px}
+.button{min-height:50px;display:inline-flex;align-items:center;justify-content:center;padding:0 22px;border-radius:4px;font-weight:900;transition:background-color .22s ease,transform .22s ease,border-color .22s ease}
+.button:hover{transform:translateY(-1px)}
 .primary{color:#fff;background:var(--accent)}
+.primary:hover{background:#0653b6}
 .secondary{color:var(--brand);border:1px solid var(--line);background:#fff}
-.system-list{display:grid;gap:10px;margin-top:22px}
-.system-list div{display:flex;justify-content:space-between;gap:18px;padding:12px 14px;border:1px solid var(--line);border-radius:6px;background:#f9fbfd}
+.system-list{display:grid;gap:10px;margin-top:24px}
+.system-list div{display:flex;justify-content:space-between;gap:18px;padding:14px 16px;border:1px solid var(--line);border-radius:4px;background:#f9fbfd}
 .system-list strong{color:var(--ink)}
 .system-list span{color:var(--brand);font-weight:800;white-space:nowrap}
 .notice{margin-top:18px;font-size:13px}
@@ -38,16 +40,12 @@ p{margin:0;color:var(--muted)}
   <section class="card">
     <img class="logo" src="assets/brand/xinsancheng-logo-full.png" alt="成都新三程汽车销售">
     <h1>员工安全入口</h1>
-    <p>这里仅作为内部系统跳转入口。点击进入后会出现账号密码验证，未授权人员无法查看车管、物流、流水、GPS定位和运营数据。</p>
+    <p>这里仅作为内部车管系统跳转入口。点击进入后会出现账号密码验证，未授权人员无法查看车辆、合同、收款和风控数据。</p>
     <div class="system-list" aria-label="内部系统范围">
       <div><strong>车管系统</strong><span>车辆、合同、收款、风控</span></div>
-      <div><strong>GPS定位看板</strong><span>EasyGo车辆位置、电量、在线状态</span></div>
-      <div><strong>物流看板</strong><span>订单、流水、司机位置</span></div>
     </div>
     <div class="actions">
       <a class="button primary" href="https://openclaw.xinsancheng.cn:8443/ops" target="_blank" rel="noreferrer">进入车管系统</a>
-      <a class="button secondary" href="https://openclaw.xinsancheng.cn:8443/ops/gps" target="_blank" rel="noreferrer">查看GPS看板</a>
-      <a class="button secondary" href="https://openclaw.xinsancheng.cn:8443/ops/logistics" target="_blank" rel="noreferrer">查看物流看板</a>
       <a class="button secondary" href="/">返回官网首页</a>
     </div>
     <p class="notice">安全说明：后台由服务端密码门禁保护。官网只提供入口，不保存账号密码，不展示任何后台数据。</p>
